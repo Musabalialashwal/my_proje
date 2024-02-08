@@ -1,55 +1,3055 @@
-<html>
-    <head>
-        
-        <meta charset="UTF-8" />
+
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<meta name="csrf-token" content="i96nJyLSfclvwPq4DQqHZg4PefSvaWwPYCMvZ0BF">
+<style>
+
+    [dir="rtl"] .dash-sidebar {
+        left: auto !important;
+    }
+
+    [dir="rtl"] .dash-header {
+        left: 0;
+        right: 280px;
+    }
+
+    [dir="rtl"] .dash-header:not(.transprent-bg) .header-wrapper {
+        padding: 0 0 0 30px;
+    }
+
+    [dir="rtl"] .dash-header:not(.transprent-bg):not(.dash-mob-header)~.dash-container {
+        margin-left: 0px;
+    }
+
+    [dir="rtl"] .me-auto.dash-mob-drp {
+        /* margin-right: 10px !important; */
+    }
+
+    [dir="rtl"] .me-auto {
+        margin-left: 10px !important;
+    }
+
+
+    [dir="rtl"] .header-wrapper .ms-auto {
+        margin-left: 0 !important;
+    }
+
+    [dir="rtl"] .dash-header {
+        left: 0 !important;
+        right: 0px !important;
+    }
+
+    [dir="rtl"] .list-group-flush>.list-group-item .float-end {
+        float: left !important;
+    }
+    /* start loader style */
+    .loading {
+            z-index: 1027;
+            position: fixed;
+            top: 0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .loader {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            animation: rotate 0.5s linear infinite
+      }
+      .no-scroll {
+            height: 100%;
+            overflow: hidden;
+        }
+      .loader::before , .loader::after {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        inset: 0px;
+        border-radius: 50%;
+        border: 5px solid #008ECC;
+        animation: prixClipFix 2s linear infinite ;
+      }
+      .loader::after{
+        inset: 8px;
+        transform: rotate3d(90, 90, 0, 180deg );
+        border-color: #fff;
+      }
+
+      @keyframes rotate {
+        0%   {transform: rotate(0deg)}
+        100%   {transform: rotate(360deg)}
+      }
+
+      @keyframes prixClipFix {
+          0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+          50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+          75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      }
+    /* start loader style */
+</style>
+<style>
+    .salla-addon__duedate {
+        background: rgba(115 129 169 / 10%);
+        border: 1px solid rgba(191, 176, 245, 0.568);
+        border-radius: 8px
+    }
+
+    .salla-addon__duedate__head {
+        background: rgba(146 152 206 / 15%);
+        border-bottom: 1px solid rgba(192, 186, 243, 0.6);
+        font-size: 14px;
+        padding: 10px 15px;
+        text-align: center
+    }
+
+    .salla-addon__duedate__body {
+        padding: 10px 15px;
+        text-align: center
+    }
+
+    .salla-addon__duedate b {
+        color: #004d5a
+    }
+
+
+
+
+    .btn-tiffany {
+        color: #ffffff !important;
+        background-color: #008ECC !important;
+        border-color: #008ECC !important;
+    }
+
+    .btn-tiffany:hover,
+    .btn-tiffany:active,
+    .btn-tiffany:focus {
+        background-color: #0079ad !important;
+        border-color: #0072a3 !important
+    }
+
+    .font-30 {
+        font-size: 30px !important;
+    }
+
+    .font-16 {
+        font-size: 16px !important;
+    }
+
+    .btn--outlined.primary {
+        border-color: #008ECC !important
+    }
+
+    .btn--outlined.primary,
+    .btn--outlined.primary *{
+        color: #004d5a !important
+    }
+</style>
+<head>
+    <title>
+        Store Online Alashwl -     منتجات
+    </title>
+
+    <meta charset="utf-8" dir="rtl" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leon | Template One</title>
-    <!-- Main Template CSS File -->
-    <link rel="stylesheet" href="css/leon.css" />
-    <!-- Render All Elements Normally -->
-    <link rel="stylesheet" href="css/normalize.css" />
-    <!-- Font Awesome Library -->
-    <link rel="stylesheet" href="css/all.min.css" />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <link rel="stylesheet" href="/css/mo.css">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-        
-        <title>login</title>
-        <link rel="stylesheet" href="css/login.css">
+    <meta name="description" content="Doing - Online Store Builder" />
+    <meta name="keywords" content="Doing" />
+    <meta name="author" content="Doin9|develope" />
+    <meta name="csrf-token" content="i96nJyLSfclvwPq4DQqHZg4PefSvaWwPYCMvZ0BF">
+
+    <!-- Favicon icon -->
+
+    <link rel="icon" href="https://doin9.com/assets/img/placeholder.jpg" type="image/x-icon" />
+
+
+    <!-- font css -->
+    <link rel="stylesheet" href="https://doin9.com/assets/fonts/tabler-icons.min.css">
+    <link rel="stylesheet" href="https://doin9.com/assets/fonts/feather.css">
+    <link rel="stylesheet" href="https://doin9.com/assets/fonts/fontawesome.css">
+    <link rel="stylesheet" href="https://doin9.com/assets/fonts/material.css">
+    <link rel="stylesheet" href="https://doin9.com/custom/libs/animate.css/animate.min.css">
+    <link rel="stylesheet" href="https://doin9.com/custom/libs/select2/dist/css/select2.min.css">
+     <link rel="stylesheet" href="https://doin9.com/custom/libs/@fortawesome/fontawesome-free/css/all.min.css">
+     <link rel="stylesheet" href="https://doin9.com/custom/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css">
+     <link rel="stylesheet" href="https://doin9.com/custom/libs/summernote/summernote-bs4.css">
+     <link rel="stylesheet" href="https://doin9.com/assets/css/plugins/bootstrap-switch-button.min.css">
+     
+      <link rel="stylesheet" href="https://doin9.com/assets/css/plugins/wcolpick.css"/>
+
+     
+     
+    <!-- vendor css -->
     
-    </head>
-    <body>
-        <div class="img">
-            <div class="content">
-                <h2> تسجيل الدخول </h2>
-                <form action="#">
-                    <div class="filed">
-                        <input type="text" required placeholder=" ادخل الاسم " name=" ادخل الاسم " id="111">
+    <link rel="stylesheet" href="https://doin9.com/assets/css/customizer.css">
+    <link rel="stylesheet" href="https://doin9.com/assets/css/custom.css">
 
+    
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"/>
+        <!-- Bootstrap-Iconpicker -->
+        
+        <link rel="stylesheet" href="https://doin9.com/assets/plugins/bootstrap-iconpicker/css/bootstrap-iconpicker.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="https://doin9.com/custom/css/custom.css">
+    <link rel="stylesheet" href="https://doin9.com/assets/css/plugins/style.css">
+            <link rel="stylesheet" href="https://doin9.com/assets/css/style-rtl.css" id="main-style-link">
+                <link rel="stylesheet" href="https://doin9.com/assets/css/style.css" id="main-style-link">
+    
+
+    
+
+    <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+    <script>
+
+        // Enable pusher logging - don't include this in production
+        Pusher.logToConsole = false;
+
+        var pusher = new Pusher('a52c1e925986b2beda85', {
+            cluster: 'ap1'
+        });
+
+        var user = "1253";
+        // alert(user);
+        var channel = pusher.subscribe('user.'+user );
+        channel.bind('order', function(data) {
+            // alert((data));
+            // var message = "+data.message+";
+            show_toastr('Success', "لديك طلب جديدة!", 'success');
+            location.reload();
+            // $("#message_notifier").show();
+            // $('#message_notifier p').text(data);
+
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    
+    
+    <link rel="stylesheet" href="https://doin9.com/assets/css/plugins/introjs.min.css">
+    
+
+
+    
+    <script src="https://doin9.com/assets/js/log.js"></script>
+    
+</head>
+<body class="theme-6">
+    
+    <section id="loading"  >
+        <span id="loader" ></span>
+    </section>
+    
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+
+    <!-- [ navigation menu ] start -->
+    <nav class="dash-sidebar light-sidebar transprent-bg">
+    <div class="navbar-wrapper">
+    <div class="m-header justify-content-center">
+        <a href="https://doin9.com/dashboard" class="b-brand">
+            <!-- ========   change your logo hear   ============ -->
+            <img src="https://doin9.com/storage/uploads/logo//logo-dark.png?timestamp=1707416765"
+                alt="Doing" class="logo logo-lg" height="40px" />
+                        </a>
+
+    </div>
+    <div class="navbar-content">
+        <ul class="dash-navbar">
+                            <li
+                    class="dash-item dash-hasmenu collapsed">
+                    <a href="#!" class="dash-link ">
+                        <span class="dash-micon">
+                            <i class="ti ti-home"></i>
+                        </span>
+                        <span class="dash-mtext">لوحة التحكم</span>
+                        <span class="dash-arrow">
+                            <i data-feather="chevron-right"></i>
+                        </span>
+                    </a>
+                    <ul
+                        class="dash-submenu ">
+                                                    <li class="dash-item ">
+                                <a class="dash-link" href="https://doin9.com/dashboard">لوحة التحكم</a>
+                            </li>
+                                                
+                                                    <li
+                                class="Store-orders-item dash-item collapsed">
+                                <a class="dash-link" href="https://doin9.com/orders">طلبات</a>
+                            </li>
+                                            </ul>
+                </li>
+                                    <li
+                        class="Store-shop-item dash-item dash-hasmenu  active dash-trigger">
+                        <a href="#!" class="dash-link">
+                            <span class="dash-micon">
+                                <i class="ti ti-license"></i>
+                            </span>
+                            <span class="dash-mtext">المتجر</span>
+                            <span class="dash-arrow">
+                                <i data-feather="chevron-right"></i>
+                            </span>
+                        </a>
+                        <ul class="dash-submenu ">
+                                                            <li
+                                    class="dash-item  active">
+                                    <a class="dash-link" href="https://doin9.com/product">منتجات</a>
+                                </li>
+                                                                                        <li
+                                    class="dash-item ">
+                                    <a class="dash-link"
+                                        href="https://doin9.com/product_categorie">صنف المنتج</a>
+                                </li>
+                                                                                        
+                            
+                            
+
+                            
+                                                                                                <li
+                                        class="dash-item ">
+                                        <a class="dash-link"
+                                            href="https://doin9.com/custom-page">صفحة مخصص</a>
+                                    </li>
+                                                                                    </ul>
+                    </li>
+                
+                                    <li class="Store-design-item dash-item collapsed">
+                        <a href="https://doin9.com/themes"
+                            class="dash-link ">
+                            <span class="dash-micon">
+                                <i class="ti ti-layout-2"></i>
+                            </span>
+                            <span class="dash-mtext">التصميم</span>
+                        </a>
+                    </li>
+                                                    <li
+                        class="Store-staff-item dash-item dash-hasmenu collapsed">
+                        <a href="#!" class="dash-link ">
+                            <span class="dash-micon">
+                                <i class="ti ti-users"></i>
+                            </span>
+                            <span class="dash-mtext">طاقم عمل</span>
+                            <span class="dash-arrow">
+                                <i data-feather="chevron-right"></i>
+                            </span>
+                        </a>
+                        <ul
+                            class="dash-submenu ">
+                                                            <li class="dash-item ">
+                                    <a class="dash-link" href="https://doin9.com/roles">الصلاحيات</a>
+                                </li>
+                                                                                        <li
+                                    class="dash-item collapsed">
+                                    <a class="dash-link" href="https://doin9.com/users">مستخدم</a>
+                                </li>
+                                                    </ul>
+                    </li>
+                                                                            <li class="Store-shipping-item dash-item ">
+                            <a class="dash-link" href="https://doin9.com/shipping">
+                                <span class="dash-micon">
+                                    <i class="ti ti-truck"></i>
+                                </span>
+                                <span class="dash-mtext">خدمات التوصيل</span>
+
+                            </a>
+                        </li>
+                                                                        <li class="Store-payment-item dash-item collapsed">
+                        <a href="https://doin9.com/payment_method"
+                            class="dash-link ">
+                            <span class="dash-micon">
+                                <i class="ti ti-wallet"></i>
+                            </span>
+                            <span class="dash-mtext">وسائل الدفع</span>
+                        </a>
+                    </li>
+                
+                                    <li class="Store-wallet-item dash-item collapsed">
+                        <a href="https://doin9.com/wallet"
+                            class="dash-link ">
+                            <span class="dash-micon">
+                                <i class="ti ti-credit-card"></i>
+                            </span>
+                            <span class="dash-mtext">المحفظة والفواتير</span>
+                        </a>
+                    </li>
+                
+
+
+                
+
+                                    <li
+                        class="Store-customer-item dash-item collapsed">
+                        <a href="https://doin9.com/customer"
+                            class="dash-link ">
+                            <span class="dash-micon">
+                                <i class="ti ti-user"></i>
+                            </span>
+                            <span class="dash-mtext">عملاء</span>
+                        </a>
+                    </li>
+                                                    <li
+                        class="Store-plan-item dash-item dash-hasmenu collapsed">
+                        <a href="https://doin9.com/plans"
+                            class="dash-link ">
+                            <span class="dash-micon">
+                                <i class="ti ti-trophy"></i>
+                            </span>
+                            <span class="dash-mtext">الباقات</span>
+                        </a>
+                    </li>
+                                <li
+                class="Store-domain-item dash-item dash-hasmenu collapsed">
+                <a href="https://doin9.com/domain"
+                    class="dash-link ">
+                    <span class="dash-micon">
+                        <i class="ti ti-world"></i>
+                    </span>
+                    <span class="dash-mtext">
+                                                    إعدادات النطاق
+                                            </span>
+                </a>
+            </li>
+
+                                            <li
+                            class="Store-setting-item dash-item dash-hasmenu collapsed">
+                            <a href="https://doin9.com/settings"
+                                class="dash-link ">
+                                <span class="dash-micon">
+                                    <i class="ti ti-settings"></i>
+                                </span>
+                                <span class="dash-mtext">
+                                                                            إعدادات المتجر
+                                                                    </span>
+                            </a>
+                        </li>
+                    
+                                            <li
+                            class="Store-setting-item dash-item dash-hasmenu collapsed">
+                            <a href="https://doin9.com/appstore"
+                                class="dash-link ">
+                                <span class="dash-micon">
+                                    <i class="ti ti-grid-dots"></i>
+
+                                </span>
+                                <span class="dash-mtext">
+                                    متجر التطبيقات
+                                </span>
+                            </a>
+                        </li>
+                                    <li
+                    class="dash-item dash-hasmenu collapsed">
+                    <a href="https://doin9.com/applications/index"
+                        class="dash-link ">
+                        <span class="dash-micon">
+                            <i class="ti ti-puzzle"></i>
+                        </span>
+                        <span class="dash-mtext">
+                                التطبيقات المثبتة
+                        </span>
+                    </a>
+                </li>
+
+                <li class="dash-item ">
+                    <a href="support" class="dash-link ">
+                        <span class="dash-micon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="30"
+                                viewBox="0 0 29 30" fill="none">
+                                <circle cx="14.5" cy="15.1846" r="14.5" fill="#6FD943" />
+                                <path opacity="0.4"
+                                    d="M22.08 8.66459C21.75 8.28459 21.4 7.92459 21.02 7.60459C19.28 6.09459 17 5.18461 14.5 5.18461C12.01 5.18461 9.73999 6.09459 7.98999 7.60459C7.60999 7.92459 7.24999 8.28459 6.92999 8.66459C5.40999 10.4146 4.5 12.6946 4.5 15.1846C4.5 17.6746 5.40999 19.9546 6.92999 21.7046C7.24999 22.0846 7.60999 22.4446 7.98999 22.7646C9.73999 24.2746 12.01 25.1846 14.5 25.1846C17 25.1846 19.28 24.2746 21.02 22.7646C21.4 22.4446 21.75 22.0846 22.08 21.7046C23.59 19.9546 24.5 17.6746 24.5 15.1846C24.5 12.6946 23.59 10.4146 22.08 8.66459ZM14.5 19.6246C13.54 19.6246 12.65 19.3146 11.93 18.7946C11.52 18.5146 11.17 18.1646 10.88 17.7546C10.37 17.0346 10.06 16.1346 10.06 15.1846C10.06 14.2346 10.37 13.3346 10.88 12.6146C11.17 12.2046 11.52 11.8546 11.93 11.5746C12.65 11.0546 13.54 10.7446 14.5 10.7446C15.46 10.7446 16.35 11.0546 17.08 11.5646C17.49 11.8546 17.84 12.2046 18.13 12.6146C18.64 13.3346 18.95 14.2346 18.95 15.1846C18.95 16.1346 18.64 17.0346 18.13 17.7546C17.84 18.1646 17.49 18.5146 17.08 18.8046C16.35 19.3146 15.46 19.6246 14.5 19.6246Z"
+                                    fill="#162C4E" />
+                                <path
+                                    d="M22.08 8.66459L18.18 12.5746C18.16 12.5846 18.15 12.6046 18.13 12.6146C17.84 12.2046 17.49 11.8546 17.08 11.5646C17.09 11.5446 17.1 11.5346 17.12 11.5146L21.02 7.60459C21.4 7.92459 21.75 8.28459 22.08 8.66459Z"
+                                    fill="#162C4E" />
+                                <path
+                                    d="M11.9297 18.7947C11.9197 18.8147 11.9097 18.8347 11.8897 18.8547L7.98969 22.7647C7.60969 22.4447 7.24969 22.0847 6.92969 21.7047L10.8297 17.7947C10.8397 17.7747 10.8597 17.7647 10.8797 17.7547C11.1697 18.1647 11.5197 18.5147 11.9297 18.7947Z"
+                                    fill="#162C4E" />
+                                <path
+                                    d="M11.9297 11.5746C11.5197 11.8546 11.1697 12.2045 10.8797 12.6145C10.8597 12.6045 10.8497 12.5846 10.8297 12.5746L6.92969 8.66453C7.24969 8.28453 7.60969 7.92453 7.98969 7.60453L11.8897 11.5146C11.9097 11.5346 11.9197 11.5546 11.9297 11.5746Z"
+                                    fill="#162C4E" />
+                                <path
+                                    d="M22.08 21.7046C21.75 22.0846 21.4 22.4446 21.02 22.7646L17.12 18.8546C17.1 18.8346 17.09 18.8246 17.08 18.8046C17.49 18.5146 17.84 18.1646 18.13 17.7546C18.15 17.7646 18.16 17.7746 18.18 17.7946L22.08 21.7046Z"
+                                    fill="#162C4E" />
+                            </svg>
+                        </span>
+                        <span class="dash-mtext">هل تحتاج الى مساعدة؟</span>
+                    </a>
+                </li>
+
+                <br>
+                <br>
+                <br>
+
+                    </ul>
+        
+    </div>
+</div>
+</nav>
+
+    <!-- [ Header ] start -->
+    <!-- [ Header ] start -->
+<style>
+    .close-button:hover {
+        cursor: pointer;
+
+    }
+
+    .header-top {
+        padding: 10px 0;
+        background-color: #cce8f5;
+        border-bottom: #efefef;
+    }
+
+    .header-top-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 0rem;
+
+    }
+</style>
+    <header class="dash-header transprent-bg " >
+             
+                  <script>
+
+    $('#delet').click(function(){
+        
+        $.ajax({
+        url: 'https://doin9.com/mute-alert',
+        data: {
+            "_token": "i96nJyLSfclvwPq4DQqHZg4PefSvaWwPYCMvZ0BF",
+        },
+        method: 'POST',
+        context: this,
+        dataType: 'json',
+
+        success: function(data) {
+        $('#plan_warning').css('display','none');
+        }
+    });
+    });
+    
+</script>
+<div class="header-wrapper">
+    <div class="me-auto dash-mob-drp">
+        <ul class="list-unstyled">
+            <li class="dash-h-item mob-hamburger">
+                <a href="#!" class="dash-head-link" id="mobile-collapse">
+                    <div class="hamburger hamburger--arrowturn">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                        </div>
                     </div>
-
-                    <div class="filed space">
-                        <input type="password" class="pass-key" required placeholder=" كلمة المرور" name=" كلمة المرور  " id="112">
-                        <span class="show"> ظهور </span>
-                    </div>
-
-                    <div class="filed1">
-                        <a type="submit" class="btn btn-slide-8" href="index.php" > دخول  </a>
+                </a>
+            </li>
+                        <li class="dropdown dash-h-item drp-company">
+                <a class="dash-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
+                    role="button" aria-haspopup="false" aria-expanded="false">
+                    <span
+                        class="badge text-danger"></span>
+                    <i class="ti ti-bell "></i>
+                </a>
+                <div class="dropdown-menu dash-h-dropdown">
 
                     
+                </div>
+            </li>
+
+            <li class="dropdown dash-h-item drp-company">
+                <a class="dash-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
+                    role="button" aria-haspopup="false" aria-expanded="false">
+                    <span class="theme-avtar">
+                        <img class="theme-avtar" alt="#" style="width:30px;"
+                            src="https://doin9.com/storage/uploads/profile//avatar.png">
+                    </span>
+                    <span class="hide-mob ms-2">Hi,مصعب علي عوضه الاشول!</span>
+                    <i class="ti ti-chevron-down drp-arrow nocolor hide-mob"></i>
+                </a>
+                <div class="dropdown-menu dash-h-dropdown">
+
+                    <a href="https://doin9.com/profile" class="dropdown-item">
+                        <i class="ti ti-user"></i>
+                        <span>ملفي الشخصي</span>
+                    </a>
+                    <a href="https://doin9.com/logout" class="dropdown-item"
+                        onclick="event.preventDefault();document.getElementById('frm-logout').submit();">
+                        <i class="ti ti-power"></i>
+                        <span>تسجيل خروج</span>
+                    </a>
+                    <form id="frm-logout" action="https://doin9.com/logout" method="POST" style="display: none;"><input type="hidden" name="_token" value="i96nJyLSfclvwPq4DQqHZg4PefSvaWwPYCMvZ0BF">                    </form>
+                </div>
+            </li>
+
+
+                            <li class="dropdown dash-h-item drp-company">
+                    <a class="store-link-item dash-head-link dropdown-toggle arrow-none me-0"
+                        href="https://doin9.com/store-online-alashwl/home" target="_blank" role="button" aria-haspopup="false"
+                        aria-expanded="false">
+                        
+                        <i class="ti ti-arrow-up-right-circle"></i>
+                    </a>
+
+                </li>
+                    </ul>
+    </div>
+    <div class="ms-auto">
+        <ul class="list-unstyled">
+                            
+                                        <li class="dropdown dash-h-item drp-language">
+                    <a class="dash-head-link dropdown-toggle arrow-none me-0 cust-btn" data-bs-toggle="dropdown"
+                        href="#" role="button" aria-haspopup="false" aria-expanded="false"
+                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        data-bs-original-title="Select your bussiness">
+                        <i class="ti ti-building-store"></i>
+                        <span class="hide-mob">Store Online Alashwl</span>
+                        <i class="ti ti-chevron-down drp-arrow nocolor"></i>
+                    </a>
+                    <div class="dropdown-menu dash-h-dropdown dropdown-menu-end">
+                                                                                                            <a href=" # "
+                                    class="dropdown-item">
+                                                                            <i class="ti ti-checks text-primary"></i>
+                                                                        <span>Store Online Alashwl</span>
+                                </a>
+                                                                            <div class="dropdown-divider m-0"></div>
                     </div>
-                </form>
+                </li>
+                        <li class="dropdown dash-h-item drp-language">
+                <a class="dash-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
+                    role="button" aria-haspopup="false" aria-expanded="false">
+                    <i class="ti ti-world nocolor"></i>
+                    <span class="drp-text">Arabic</span>
+                    <i class="ti ti-chevron-down drp-arrow nocolor"></i>
+                </a>
+                <div class="dropdown-menu dash-h-dropdown dropdown-menu-end">
+                                            <a href="https://doin9.com/change-language/ar"
+                            class="dropdown-item text-primary">
+                            <span>Arabic</span>
+                        </a>
+                                            <a href="https://doin9.com/change-language/en"
+                            class="dropdown-item ">
+                            <span>English</span>
+                        </a>
+                                                        </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</header>
+<!-- [ Header ] end -->
+
+    
+
+    <div class="container p-5 fixed-top" id="message_notifier" style="display: none">
+        <div class="row no-gutters">
+            <div class="col-lg-5 col-md-12 ml-auto">
+                <div class="alert alert-success fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="True">&times;</span>
+                    </button>
+                    <h4 class="alert-heading">Please checkout your notifications!</h4>
+                    <p>You have a new order.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] start -->
+    <div class="dash-container">
+        <div class="dash-content">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+                <div class="page-block">
+                    <div class="row align-items-center">
+                        <div class="col-md-3 mb-3">
+                            <div class="page-header-title">
+                                <h4 class="m-b-10">    منتجات
+</h4>
+                            </div>
+                            <ul class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="https://doin9.com/dashboard">الرئيسية</a></li>
+    <li class="breadcrumb-item active" aria-current="page">منتجات</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="col-12">
+                                                            </div>
+                            <div class="col-12 text-end">
+                                    <div class="pr-2">
+        <a class="btn btn-sm btn-icon  bg-light-secondary me-2" href="https://doin9.com/products/export" data-bs-toggle="tooltip"
+            data-bs-placement="top" title="تصدير">
+            <i data-feather="download"></i>
+        </a>
+                    <a href="#!" class="btn btn-sm btn-icon  bg-light-secondary me-2" data-bs-toggle="tooltip"
+                data-bs-placement="top" title="استيراد" data-ajax-popup="true" data-size="lg"
+                data-title="استيردا ملف اكسل للمنتجات" data-url="https://doin9.com/product/import/export">
+                <i data-feather="upload"></i>
+            </a>
+                            
+            <div class="dropdown btn btn-sm btn-icon">
+                
+                <a id="add-btn" aria-expanded="false" data-bs-toggle="dropdown"
+                    class="btn-xlg btn-primary btn--dropdown btn-rounded mt-0">
+                    <i data-feather="plus"></i>
+                    <ul class="dropdown-menu dropdown-menu-left dropdown-menu--products-type p-2" style="">
+                        <li class="btn btn-light create-product-btn" data-type="product">
+                            <a data-product-type="product"    class="dropdown-link">
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                                <h6>
+                                    منتج جاهز
+                                    <span>المنتجات الملموسة والقابلة للشحن</span>
+                                </h6>
+                            </a>
+                        
+                        </li>
+                        
+                        <li class="btn btn-light create-product-btn" data-type="digital"><a data-product-type="product"
+                                class="dropdown-link"><i class="sicon-game-controller-alt"></i>
+                                <h6>
+                                    منتج رقمي
+                                    <span>الكتب الإلكترونية، الدورات، ملفات للتحميل</span>
+                                </h6>
+                            </a>
+                        </li>
+
+                    </ul>
+            </div>
+                <a id="list-view" class="btn btn-sm btn-icon  bg-light-secondary" onclick="view_type('list')"
+            data-bs-toggle="tooltip" data-bs-placement="top" title="عرض القائمة">
+            <i class="ti ti-list f-30"></i>
+        </a>
+
+        <a id="grid-view" class="btn btn-sm btn-icon  bg-light-secondary" onclick="view_type('grid')"
+            data-bs-toggle="tooltip" data-bs-placement="top" title="عرض شبكي" style="display: none">
+            <i class="ti ti-grid-dots f-30"></i>
+        </a>
+
+    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- [ breadcrumb ] end -->
+            <!-- [ Main Content ] start -->
+                <!-- //////////////////////// -->
+ <!-- filter modal start  -->
+
+
+ 
+
+ <div class="offcanvas offcanvas-start" tabindex="-1" id="filter_product_et" aria-labelledby="offcanvasExampleLabel"
+     style="visibility: hidden;" aria-hidden="true">
+     <div class="rec-filter-cont">
+         <form>
+             <div class="rec-filters">
+                 <h1 class="title title--small"><i class=" fa-solid fa-filter"></i> فرز المنتجات حسب
+                     <button type="button" id="filter_close" class="btn btn--circular">
+                         <i class="fa-solid fa-xmark"
+                             style="color: #fff; display: inline-block; font-size: 14px;margin-right: 5px;"></i>
+                     </button>
+                 </h1>
+                 <div class="rec-filter__section"><button type="button" data-bs-target="#filter_status_categories"
+                         data-bs-toggle="collapse" aria-expanded="true" class="btn filter-head"><span><i></i>حالة
+                             المنتج</span></button>
+                     <div id="filter_status_categories" aria-expanded="true"
+                         class="collapse filter-content collapse in">
+                         <ul class="rec-list rec-list--vertical">
+                             <div>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input id="StatusFilter_0"
+                                             type="checkbox" class="filter-options">
+                                         <label for="StatusFilter_0"><span>الكل</span></label>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input id="StatusFilter_1"
+                                             type="checkbox" class="filter-options">
+                                         <label for="StatusFilter_1"><span>منتجات
+                                                 غير مسعرة</span></label>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input id="StatusFilter_2"
+                                             type="checkbox" class="filter-options">
+                                         <label for="StatusFilter_2"><span>منتجات
+                                                 مثبتة</span></label>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input id="StatusFilter_3"
+                                             type="checkbox" class="filter-options">
+                                         <label for="StatusFilter_3"><span>منتجات
+                                                 مخفية</span></label>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input id="StatusFilter_4"
+                                             type="checkbox" class="filter-options">
+                                         <label for="StatusFilter_4"><span>منتجات
+                                                 مخفية من تطبيق المتجر</span></label>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input id="StatusFilter_5"
+                                             type="checkbox" class="filter-options">
+                                         <label for="StatusFilter_5"><span>منتجات
+                                                 مخفضة</span></label>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input id="StatusFilter_6"
+                                             type="checkbox" class="filter-options">
+                                         <label for="StatusFilter_6"><span>منتجات
+                                                 نفدت</span></label>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input id="StatusFilter_7"
+                                             type="checkbox" class="filter-options">
+                                         <label for="StatusFilter_7"><span>منتجات
+                                                 للبيع</span></label>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input id="StatusFilter_8"
+                                             type="checkbox" class="filter-options">
+                                         <label for="StatusFilter_8"><span>منتجات
+                                                 غير مصنفة</span></label>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input id="StatusFilter_9"
+                                             type="checkbox" class="filter-options">
+                                         <label for="StatusFilter_9"><span>منتجات
+                                                 خاضعة للضريبة</span></label>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input id="StatusFilter_10"
+                                             type="checkbox" class="filter-options">
+                                         <label for="StatusFilter_10"><span>منتجات تتطلب شحن</span></label>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input id="StatusFilter_11"
+                                             type="checkbox" class="filter-options">
+                                         <label for="StatusFilter_11"><span>منتجات قاربت على
+                                                 النفاد</span></label>
+                                     </div>
+                                 </li>
+                             </div>
+                             <!---->
+                             <!---->
+                             <!---->
+                             <!---->
+                         </ul>
+                     </div>
+                 </div>
+                 <div class="rec-filter__section"><button type="button" data-bs-target="#filter_brands_categories"
+                         data-bs-toggle="collapse" aria-expanded="true" class="btn filter-head"><span><i></i>ماركة
+                             المنتج</span></button>
+                     <div id="filter_brands_categories" aria-expanded="true"
+                         class="collapse filter-content collapse in">
+                         <ul class="rec-list rec-list--vertical">
+                             <!---->
+                             <div class="form-group">
+                                 <div
+                                     class="vue-treeselect--custom vue-treeselect--without-effect vue-treeselect--full vue-treeselect vue-treeselect--multi vue-treeselect--searchable vue-treeselect--open-below">
+                                     <!---->
+                                     <div class="vue-treeselect__control">
+                                         <div class="vue-treeselect__value-container">
+                                             <div class="vue-treeselect__multi-value">
+                                                 <div
+                                                     class="vue-treeselect__placeholder vue-treeselect-helper-zoom-effect-off">
+                                                     الماركة</div>
+                                                 <div class="vue-treeselect__input-container"><input type="text"
+                                                         autocomplete="off" tabindex="0"
+                                                         class="vue-treeselect__input" style="width: 5px;">
+                                                     <div class="vue-treeselect__sizer"></div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="vue-treeselect__control-arrow-container"><svg
+                                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.362 292.362"
+                                                 class="vue-treeselect__control-arrow">
+                                                 <path
+                                                     d="M286.935 69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952 0-9.233 1.807-12.85 5.424C1.807 72.998 0 77.279 0 82.228c0 4.948 1.807 9.229 5.424 12.847l127.907 127.907c3.621 3.617 7.902 5.428 12.85 5.428s9.233-1.811 12.847-5.428L286.935 95.074c3.613-3.617 5.427-7.898 5.427-12.847 0-4.948-1.814-9.229-5.427-12.85z">
+                                                 </path>
+                                             </svg></div>
+                                     </div>
+                                     <div class="vue-treeselect__menu-container" style="z-index: 999;">
+                                         <!---->
+                                     </div>
+                                 </div>
+                             </div>
+                             <!---->
+                             <!---->
+                             <!---->
+                         </ul>
+                     </div>
+                 </div>
+                 <div class="rec-filter__section"><button type="button" data-bs-target="#filter_types_categories"
+                         data-bs-toggle="collapse" aria-expanded="true" class="btn filter-head"><span><i></i>نوع
+                             المنتج</span></button>
+                     <div id="filter_types_categories" aria-expanded="true"
+                         class="collapse filter-content collapse in">
+                         <ul class="rec-list rec-list--vertical">
+                             <div>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input
+                                             id="ProductTypeFilter_0" type="checkbox" class="filter-options">
+                                         <label for="ProductTypeFilter_0"><span>الكل</span></label>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input
+                                             id="ProductTypeFilter_1" type="checkbox" class="filter-options">
+                                         <label for="ProductTypeFilter_1"><span>منتج جاهز</span></label>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input
+                                             id="ProductTypeFilter_2" type="checkbox" class="filter-options">
+                                         <label for="ProductTypeFilter_2"><span>خدمة حسب
+                                                 الطلب</span></label>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input
+                                             id="ProductTypeFilter_3" type="checkbox" class="filter-options">
+                                         <label for="ProductTypeFilter_3"><span>أكل</span></label>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input
+                                             id="ProductTypeFilter_4" type="checkbox" class="filter-options">
+                                         <label for="ProductTypeFilter_4"><span>منتج رقمي</span></label>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input
+                                             id="ProductTypeFilter_5" type="checkbox" class="filter-options">
+                                         <label for="ProductTypeFilter_5"><span>بطاقة رقمية</span></label>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input
+                                             id="ProductTypeFilter_6" type="checkbox" class="filter-options">
+                                         <label for="ProductTypeFilter_6"><span>مجموعة منتجات</span></label>
+                                     </div>
+                                 </li>
+                                 <li>
+                                     <div class="rec-checkbox rec-checkbox--default light"><input
+                                             id="ProductTypeFilter_7" type="checkbox" class="filter-options">
+                                         <label for="ProductTypeFilter_7"><span>استخدام نماذج
+                                                 جاهزة!</span></label>
+                                     </div>
+                                 </li>
+                             </div>
+                             <!---->
+                             <!---->
+                             <!---->
+                             <!---->
+                         </ul>
+                     </div>
+                 </div>
+                 <div class="rec-filter__section"><button type="button"
+                         data-bs-target="#filter_categories_categories" data-bs-toggle="collapse"
+                         aria-expanded="true" class="btn filter-head"><span><i></i>تصنيف
+                             المنتج</span></button>
+                     <div id="filter_categories_categories" aria-expanded="true"
+                         class="collapse filter-content collapse in">
+                         <ul class="rec-list rec-list--vertical">
+                             <!---->
+                             <!---->
+                             <!---->
+                             <!---->
+                             <div class="form-group">
+                                 <div class="vue-treeselect--custom vue-treeselect--without-effect vue-treeselect--full vue-treeselect vue-treeselect--multi vue-treeselect--open-below"
+                                     is-default-expanded="true">
+                                     <!---->
+                                     <div class="vue-treeselect__control">
+                                         <div class="vue-treeselect__value-container">
+                                             <div class="vue-treeselect__multi-value">
+                                                 <div
+                                                     class="vue-treeselect__placeholder vue-treeselect-helper-zoom-effect-off">
+                                                     التصنيف</div>
+                                                 <div tabindex="0" class="vue-treeselect__input-container">
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="vue-treeselect__control-arrow-container"><svg
+                                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.362 292.362"
+                                                 class="vue-treeselect__control-arrow">
+                                                 <path
+                                                     d="M286.935 69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952 0-9.233 1.807-12.85 5.424C1.807 72.998 0 77.279 0 82.228c0 4.948 1.807 9.229 5.424 12.847l127.907 127.907c3.621 3.617 7.902 5.428 12.85 5.428s9.233-1.811 12.847-5.428L286.935 95.074c3.613-3.617 5.427-7.898 5.427-12.847 0-4.948-1.814-9.229-5.427-12.85z">
+                                                 </path>
+                                             </svg></div>
+                                     </div>
+                                     <div class="vue-treeselect__menu-container" style="z-index: 999;">
+                                         <!---->
+                                     </div>
+                                 </div>
+                             </div>
+                         </ul>
+                     </div>
+                 </div>
+                 <div class="rec-filter__submit"><button type="button" class="btn btn-tiffany btn-filter-submit">عرض
+                         النتائج
+                     </button> <button type="reset" class="btn btn-outline-dark btn-filter-reset">إعادة
+                         تعيين
+                     </button></div>
+                 <div class="rec-filter__section mt-10">
+                     <div role="group" class="btn-group rec-btn-group full-width"><a id="filterOptions"
+                             type="button" class="btn btn-wide btn-default btn-icon-prepend rec-fvm"><i
+                                 class="fa-solid fa-file-arrow-down"></i>
+                             تصدير النتائج
+                         </a></div>
+                 </div>
+             </div>
+         </form>
+     </div>
+
+
+ </div>
+
+ <!-- bell_product_modal modal start  -->
+ <!-- ///////////////////////////////////////// -->
+ 
+
+ <!-- delet_all_products_modal End -->
+ <div class="modal fade modal-under-nav modal-search modal-close-out" id="delet_all_products_modal" tabindex="-1"
+     role="dialog" aria-hidden="true">
+     <div class="modal-dialog modal-lg"
+         style="margin-top: 128px;margin-bottom: 50px;transition-duration: 0.4s;transition-timing-function: cubic-bezier(0.36, 0.55, 0.19, 1);transition-property: all, margin;">
+         <div role="dialog" aria-labelledby="swal2-title" aria-describedby="swal2-content"
+             class="swal2-modal swal2-show" tabindex="-1"
+             style="width: 500px; padding: 20px; background: rgb(255, 255, 255); display: block; min-height: 300px;">
+             <ul class="swal2-progresssteps" style="display: none;"></ul>
+             <div class="swal2-icon swal2-error" style="display: none;"><span class="swal2-x-mark"><span
+                         class="swal2-x-mark-line-left"></span><span class="swal2-x-mark-line-right"></span></span>
+             </div>
+             <div class="swal2-icon swal2-question" style="display: none;">?</div>
+             <div class="swal2-icon swal2-warning" style="display: block;">!</div>
+             <div class="swal2-icon swal2-info" style="display: none;">i</div>
+             <div class="swal2-icon swal2-success" style="display: none;">
+                 <div class="swal2-success-circular-line-left" style="background: rgb(255, 255, 255);">
+                 </div>
+                 <span class="swal2-success-line-tip"></span> <span class="swal2-success-line-long"></span>
+                 <div class="swal2-success-ring"></div>
+                 <div class="swal2-success-fix" style="background: rgb(255, 255, 255);"></div>
+                 <div class="swal2-success-circular-line-right" style="background: rgb(255, 255, 255);">
+                 </div>
+             </div><img class="swal2-image" style="display: none;">
+             <h2 class="swal2-title" id="swal2-title">تنبيه</h2>
+             <div id="swal2-content" class="swal2-content" style="display: block;">سيتم حذف جميع منتجات
+                 المتجر٫
+                 وهذه الخطوة
+                 غير قابلة للتراجع</div><input class="swal2-input" style="display: none;"><input type="file"
+                 class="swal2-file" style="display: none;">
+             <div class="swal2-range" style="display: none;"><output></output><input type="range"></div>
+             <select class="swal2-select" style="display: none;"></select>
+             <div class="swal2-radio" style="display: none;"></div><label for="swal2-checkbox"
+                 class="swal2-checkbox" style="display: none;"><input type="checkbox"></label>
+             <textarea class="swal2-textarea" style="display: none;"></textarea>
+             <div class="swal2-validationerror" id="swal2-validationerror" style="display: none;"></div>
+             <div class="swal2-buttonswrapper" style="display: block;"><button type="button"
+                     class="swal2-confirm red-alert swal2-styled" aria-label="">موافق</button><button type="button"
+                     class="swal2-cancel swal2-styled" aria-label=""
+                     style="display: inline-block; background-color: rgb(170, 170, 170);">إلغاء</button>
+             </div>
+             <button type="button" class="swal2-close" style="display: none;">×</button>
+         </div>
+     </div>
+ </div>
+
+ 
+
+
+<!-- assign_img_product_modal modal start  -->
+<div class="modal fade modal-under-nav modal-search modal-close-out" id="assign_img_product_modal" tabindex="-1"
+    role="dialog" aria-hidden="true" style="max-height: 90vh;
+    overflow: auto;">
+    <div class="modal-dialog modal-lg"
+        style="margin-top: 128px;margin-bottom: 50px;transition-duration: 0.4s;transition-timing-function: cubic-bezier(0.36, 0.55, 0.19, 1);transition-property: all, margin;">
+        <div class="modal-body">
+                </div>
+
+    </div>
+</div>
+
+
+<!-- manage_product_count_modal End -->
+<div class="modal fade modal-under-nav modal-search modal-close-out p-3" id="product-variant-modal" tabindex="-1"
+    role="dialog" aria-hidden="true" style="max-height: 90vh;
+    overflow: auto;">
+    <div class="modal-dialog modal-xl"
+        style="margin-top: 128px;margin-bottom: 50px;transition-duration: 0.4s;transition-timing-function: cubic-bezier(0.36, 0.55, 0.19, 1);transition-property: all, margin;">
+        <div class="modal-body">
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<!-- product_options_modal End -->
+
+<div class="modal fade" id="product-option-modal" tabindex="-1" role="dialog"
+    aria-hidden="true" style="
+        overflow: auto;">
+    <div class="modal-dialog modal-lg"
+        style="margin-top: 128px;margin-bottom: 50px;transition-duration: 0.4s;transition-timing-function: cubic-bezier(0.36, 0.55, 0.19, 1);transition-property: all, margin;">
+        <div class="modal-content">
+            <div class="modal-header bg-info">
+
+                <h6 class="modal-title" style="color:white">
+                    بيانات المنتج
+
+                    
+
+                </h6>
+                <button type="button" class="btn bg-info" data-bs-dismiss="modal" aria-label="Close">X</button>
+            </div>
+            <div class="modal-body">
+
             </div>
 
-        </div>
-        
 
-        <script type="text/javascript" src="js/login.js"></script>
-    </body>
+
+        </div>
+    </div>
+</div>
+
+<!-- product_options_modal End -->
+
+
+<!-- //////////////////////////////////// -->
+
+
+    <div class="page-content">
+        <div class="content-wrapper" id="content_box">
+            <div class="content">
+                <div id="progress-report-modal" class="modal modal-backup fade in col-sm-6 col-sm-offset-3" tabindex="-1"
+                    style="direction: ltr;">
+                </div>
+                <div>
+
+                    <div class="">
+                        <div class="tab-pane fade show" id="grid_veiw">
+
+
+
+                            <div class="d-flex flex-wrap products">
+                                <div class="card m-2 empty-product" id="product-temp-"
+    style="width: 20rem; display:none">
+
+            <a class=" btn btn-sm btn-icon btn-danger delete-btn"
+            href="#" data-title="حذف الرصاص" data-confirm="هل أنت متأكد؟"
+            data-text="لا يمكن التراجع عن هذا الإجراء. "
+            data-confirm-yes="delete-form-temp-" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="حذف" style="position: absolute; opacity: 0.8; ">
+            <i class="fa-solid fa-xmark"></i>
+        </a>
+        <form method="POST" action="https://doin9.com/product/temp-" accept-charset="UTF-8" id="delete-form-temp-" class="delete-form"><input name="_method" type="hidden" value="DELETE"><input name="_token" type="hidden" value="i96nJyLSfclvwPq4DQqHZg4PefSvaWwPYCMvZ0BF">
+        </form>
+    
+
+    <form method="POST" action="https://doin9.com/product/store" accept-charset="UTF-8" id="frmTarget" enctype="multipart/form-data"><input name="_token" type="hidden" value="i96nJyLSfclvwPq4DQqHZg4PefSvaWwPYCMvZ0BF">
+
+    
+
+    <input type="hidden" class="product-type" name="type" id="" value="default">
+
+    <div id="product-dropzone" style="display: none">
+
+    </div>
+
+
+    <!-- //////////////////////////////////// -->
+
+
+
+
+
+    
+
+    <div class="product-wrapper">
+
+
+        <div class="caption caption-small " style="width:100%;">
+            <div class=" product-fields">
+
+                <div class="group-1">
+                    <div class="thumb">
+                        <div class="thumb-mask m-auto" style="width:100%; height: 300px;">
+                            <img id="coverImg-temp-"
+                                class="rounded-top coverImg coverImg-temp-"
+                                src="https://doin9.com/storage/uploads/is_cover_image/default.jpg"
+                                alt="">
+
+
+                            <div class="product-check rec-checkbox rec-checkbox--default rec-checkbox--large rec-checkbox--primary-bg"
+                                style="display: none;"><input type="checkbox" id="product_-363987222"
+                                    autocomplete="off" class="product-check"> <label for="product_-363987222"><span
+                                        class="form-label">منتج جاهز</span></label>
+                            </div>
+                            <button type="button" data-product-id="temp-" data-inline-loader=""
+                                class="btn btn-light bg-light product-image-text product-image-modal"
+                                data-bs-toggle="modal" data-bs-target="#assign_img_product_modal"
+                                style="z-index: unset">
+                                <span style="position: relative;
+                                top: -2px;">
+                                    اختر ملف
+                                </span>
+                                <i class="fa-regular fa-image" style=""></i>
+
+                            </button>
+                            <button type="button" class="pin_btn" style="display: none;">
+                                <i class="sicon-thumbtack"></i></button>
+                        </div>
+
+                    </div>
+
+                    <div class="">
+                        <div id="" class="p-2 tooltip-toggle trans top " required="required">
+                            <div class="input-group border" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="اسم">
+                                <span class="input-group-addon input-group-addon-small btn btn-light disabled"
+                                    style="opacity: 0.5; z-index: unset;"><i
+                                        class="fa-solid fa-box-archive product-name-icon"></i></span>
+                                
+                                <input class="form-control product-field product-name" id="product-name-temp-" placeholder="أدخل الاسم" required="required" name="name" type="text">
+                                <!---->
+                            </div>
+                        </div>
+                        <div class=" p-2 product-price-small-screen ">
+
+                            <div class="input-group border " data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="سعر">
+                                <span class="input-group-addon input-group-addon-small btn btn-light disabled"
+                                    style="opacity: 0.5 ;z-index: unset;">
+                                    <i class="fa-solid fa-money-bills"></i>
+                                </span>
+                                <input step="any" placeholder="سعر" id="product-price-temp-" class="form-control product-field product-price" name="price" type="number">
+                                <span class="btn btn-light input-group-prepend disabled" style="z-index: unset">
+                                    ر.ي
+                                </span>
+
+                            </div>
+                            <!---->
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="group-2" style="width: 100%;">
+
+                    <div class="product-quantity-div p-2">
+                        <div class=" ">
+                            <div class="input-group ">
+
+                                <div class="d-flex flex-row border" style="width: 100%;height: 43.3px">
+                                    <span
+                                        class="input-group-addon input-group-addon-small btn btn-light disabled m-auto"
+                                        style="opacity: 0.5 ;z-index: unset;">
+                                        <i class="fa-solid fa-box-open"></i>
+                                    </span>
+                                    <input class="form-control product-field product-quantity" placeholder="أدخل كمية المخزون" style="width:30%" required="required" name="quantity" type="text" value="1">
+
+                                    <button type="button" data-bs-toggle="modal" onclick="show_toastr('error','الخدمة غير متاحة' , 'error');"
+
+                                        data-bs-target="#bell_product_modal" class="btn btn-light"
+                                        style="z-index: unset;padding: 2%;border-radius:unset ; cursor: not-allowed;"><i
+                                            class="fa-regular fa-bell"></i>
+                                    </button>
+
+
+                                    <button type="button" class="btn btn-light"
+                                    onclick= "console.log($(this).closest('.product-quantity')); $(this).closest('.product-quantity').val('unlimited'); "
+                                        style="z-index: unset; padding: 2%; border-radius:unset"><svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px"
+                                            height="30px">
+                                            <path
+                                                d="M 8 8 C 3.6102416 8 0 11.595515 0 16 C 0 20.400585 3.599415 24 8 24 C 10.646 24 12.420344 22.745203 13.777344 21.033203 C 13.147344 20.063203 12.616672 19.057234 12.138672 18.115234 C 10.996672 19.940234 9.828 21 8 21 C 5.220585 21 3 18.779415 3 16 C 3 13.224485 5.2377584 11 8 11 C 9.4265669 11 10.267624 11.520682 11.15625 12.525391 C 12.044876 13.530099 12.834942 15.048526 13.652344 16.673828 C 14.469745 18.29913 15.315394 20.031983 16.585938 21.464844 C 17.85648 22.897705 19.696851 24 22 24 C 26.362802 24 30 20.414234 30 16 C 30 11.599415 26.400585 8 22 8 C 19.35 8 17.576703 9.2652813 16.220703 10.988281 C 16.849703 11.961281 17.379422 12.969109 17.857422 13.912109 C 19.003422 12.069109 20.172 11 22 11 C 24.779415 11 27 13.220585 27 16 C 27 18.765766 24.719198 21 22 21 C 20.566649 21 19.72091 20.477295 18.830078 19.472656 C 17.939247 18.468017 17.14913 16.95087 16.332031 15.326172 C 15.514933 13.701474 14.671546 11.969901 13.404297 10.537109 C 12.137048 9.1043186 10.298933 8 8 8 z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                    <button type="button" data-inline-loader=""
+                                        class="btn btn-light rounded-left get-variants"
+                                        data-product-id="temp-" 
+                                        style="z-index: unset; border-radius: unset;">
+                                        <small
+                                            style="position: relative;
+                                            top: -50%;">
+                                            متغيرات المنتج
+                                        </small>
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!---->
+                    </div>
+                    <div class="product-category p-2">
+                        <div class="d-flex flex-row border" style="width: 100%">
+                            <div class="product-category-div" style="width: 70%">
+
+                                
+                                <select class="form-control multi-select  product-field" id="product-category-temp-" multiple name="product_categorie[]"><option value="354">HYUNDAI</option></select>
+
+                            </div>
+                                                            <a class=" btn btn-light btn-icon btn-add-category"
+                                    style=" height: 43.4px; border-radius: unset; width:40%;" data-ajax-popup="true"
+                                    data-url="https://doin9.com/product_categorie/create" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="إنشاء"
+                                    data-title="إنشاء صنف منتج جديد" href="#"
+                                    style="width : 200px;">
+                                    <small
+                                        style="position: relative;
+                                            top: -50%;">
+                                        صنف المنتج
+                                    </small>
+                                </a>
+                            
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            
+        </div>
+
+        <div class=" p-2">
+
+            <button type="button"  data-product-id="temp-" data-product-type="default"
+                data-inline-loader=""
+                class="btn btn-light border-slate text-slate-800 btn-flat btn-xs product-option-modal-btn mb-2">
+                <i class="fa-solid fa-sliders"></i>
+                بيانات المنتج
+            </button>
+            <button href="#" type="button" style="width: 100%;" data-product-id="temp-"
+                id="submit-temp-btn-temp-"
+                class="btn btn-primary submit-btn product-field create-product">
+                <i data-feather="check-circle" class="me-2"></i>
+                حفظ
+            </button>
+
+        </div>
+
+    </div>
+    </form>
+
+
+
+
+
+</div>
+
+
+                                                                    
+                                    <div class="card m-2 empty-product" id="product-2312"
+    style="width: 20rem; ">
+
+            <a class="bs-pass-para btn btn-sm btn-icon btn-danger delete-btn"
+            href="#" data-title="حذف الرصاص" data-confirm="هل أنت متأكد؟"
+            data-text="لا يمكن التراجع عن هذا الإجراء. "
+            data-confirm-yes="delete-form-2312" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="حذف" style="position: absolute; opacity: 0.8; ">
+            <i class="fa-solid fa-xmark"></i>
+        </a>
+        <form method="POST" action="https://doin9.com/product/2312" accept-charset="UTF-8" id="delete-form-2312" class="delete-form"><input name="_method" type="hidden" value="DELETE"><input name="_token" type="hidden" value="i96nJyLSfclvwPq4DQqHZg4PefSvaWwPYCMvZ0BF">
+        </form>
+    
+
+    <form method="POST" action="https://doin9.com/product/store" accept-charset="UTF-8" id="frmTarget" enctype="multipart/form-data"><input name="_token" type="hidden" value="i96nJyLSfclvwPq4DQqHZg4PefSvaWwPYCMvZ0BF">
+
+    
+
+    <input type="hidden" class="product-type" name="type" id="" value="default">
+
+    <div id="product-dropzone" style="display: none">
+
+    </div>
+
+
+    <!-- //////////////////////////////////// -->
+
+
+
+
+
+    
+
+    <div class="product-wrapper">
+
+
+        <div class="caption caption-small " style="width:100%;">
+            <div class=" product-fields">
+
+                <div class="group-1">
+                    <div class="thumb">
+                        <div class="thumb-mask m-auto" style="width:100%; height: 300px;">
+                            <img id="coverImg-2312"
+                                class="rounded-top coverImg coverImg-2312"
+                                src="https://doin9.com/storage/uploads/is_cover_image/م_1703599589.jpg"
+                                alt="">
+
+
+                            <div class="product-check rec-checkbox rec-checkbox--default rec-checkbox--large rec-checkbox--primary-bg"
+                                style="display: none;"><input type="checkbox" id="product_-363987222"
+                                    autocomplete="off" class="product-check"> <label for="product_-363987222"><span
+                                        class="form-label">منتج جاهز</span></label>
+                            </div>
+                            <button type="button" data-product-id="2312" data-inline-loader=""
+                                class="btn btn-light bg-light product-image-text product-image-modal"
+                                data-bs-toggle="modal" data-bs-target="#assign_img_product_modal"
+                                style="z-index: unset">
+                                <span style="position: relative;
+                                top: -2px;">
+                                    اختر ملف
+                                </span>
+                                <i class="fa-regular fa-image" style=""></i>
+
+                            </button>
+                            <button type="button" class="pin_btn" style="display: none;">
+                                <i class="sicon-thumbtack"></i></button>
+                        </div>
+
+                    </div>
+
+                    <div class="">
+                        <div id="" class="p-2 tooltip-toggle trans top " required="required">
+                            <div class="input-group border" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="اسم">
+                                <span class="input-group-addon input-group-addon-small btn btn-light disabled"
+                                    style="opacity: 0.5; z-index: unset;"><i
+                                        class="fa-solid fa-box-archive product-name-icon"></i></span>
+                                
+                                <input class="form-control product-field product-name" id="product-name-2312" placeholder="أدخل الاسم" required="required" name="name" type="text" value="سخان ومزيل للضباب وقت المطر والبرد">
+                                <!---->
+                            </div>
+                        </div>
+                        <div class=" p-2 product-price-small-screen ">
+
+                            <div class="input-group border " data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="سعر">
+                                <span class="input-group-addon input-group-addon-small btn btn-light disabled"
+                                    style="opacity: 0.5 ;z-index: unset;">
+                                    <i class="fa-solid fa-money-bills"></i>
+                                </span>
+                                <input step="any" placeholder="سعر" id="product-price-2312" class="form-control product-field product-price" name="price" type="number" value="17500">
+                                <span class="btn btn-light input-group-prepend disabled" style="z-index: unset">
+                                    ر.ي
+                                </span>
+
+                            </div>
+                            <!---->
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="group-2" style="width: 100%;">
+
+                    <div class="product-quantity-div p-2">
+                        <div class=" ">
+                            <div class="input-group ">
+
+                                <div class="d-flex flex-row border" style="width: 100%;height: 43.3px">
+                                    <span
+                                        class="input-group-addon input-group-addon-small btn btn-light disabled m-auto"
+                                        style="opacity: 0.5 ;z-index: unset;">
+                                        <i class="fa-solid fa-box-open"></i>
+                                    </span>
+                                    <input class="form-control product-field product-quantity" placeholder="أدخل كمية المخزون" style="width:30%" required="required" name="quantity" type="text" value="5">
+
+                                    <button type="button" data-bs-toggle="modal" onclick="show_toastr('error','الخدمة غير متاحة' , 'error');"
+
+                                        data-bs-target="#bell_product_modal" class="btn btn-light"
+                                        style="z-index: unset;padding: 2%;border-radius:unset ; cursor: not-allowed;"><i
+                                            class="fa-regular fa-bell"></i>
+                                    </button>
+
+
+                                    <button type="button" class="btn btn-light"
+                                    onclick= "console.log($(this).closest('.product-quantity')); $(this).closest('.product-quantity').val('unlimited'); "
+                                        style="z-index: unset; padding: 2%; border-radius:unset"><svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px"
+                                            height="30px">
+                                            <path
+                                                d="M 8 8 C 3.6102416 8 0 11.595515 0 16 C 0 20.400585 3.599415 24 8 24 C 10.646 24 12.420344 22.745203 13.777344 21.033203 C 13.147344 20.063203 12.616672 19.057234 12.138672 18.115234 C 10.996672 19.940234 9.828 21 8 21 C 5.220585 21 3 18.779415 3 16 C 3 13.224485 5.2377584 11 8 11 C 9.4265669 11 10.267624 11.520682 11.15625 12.525391 C 12.044876 13.530099 12.834942 15.048526 13.652344 16.673828 C 14.469745 18.29913 15.315394 20.031983 16.585938 21.464844 C 17.85648 22.897705 19.696851 24 22 24 C 26.362802 24 30 20.414234 30 16 C 30 11.599415 26.400585 8 22 8 C 19.35 8 17.576703 9.2652813 16.220703 10.988281 C 16.849703 11.961281 17.379422 12.969109 17.857422 13.912109 C 19.003422 12.069109 20.172 11 22 11 C 24.779415 11 27 13.220585 27 16 C 27 18.765766 24.719198 21 22 21 C 20.566649 21 19.72091 20.477295 18.830078 19.472656 C 17.939247 18.468017 17.14913 16.95087 16.332031 15.326172 C 15.514933 13.701474 14.671546 11.969901 13.404297 10.537109 C 12.137048 9.1043186 10.298933 8 8 8 z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                    <button type="button" data-inline-loader=""
+                                        class="btn btn-light rounded-left get-variants"
+                                        data-product-id="2312" 
+                                        style="z-index: unset; border-radius: unset;">
+                                        <small
+                                            style="position: relative;
+                                            top: -50%;">
+                                            متغيرات المنتج
+                                        </small>
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!---->
+                    </div>
+                    <div class="product-category p-2">
+                        <div class="d-flex flex-row border" style="width: 100%">
+                            <div class="product-category-div" style="width: 70%">
+
+                                
+                                <select class="form-control multi-select  product-field" id="product-category-2312" multiple name="product_categorie[]"><option value="354" selected="selected">HYUNDAI</option></select>
+
+                            </div>
+                                                            <a class=" btn btn-light btn-icon btn-add-category"
+                                    style=" height: 43.4px; border-radius: unset; width:40%;" data-ajax-popup="true"
+                                    data-url="https://doin9.com/product_categorie/create" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="إنشاء"
+                                    data-title="إنشاء صنف منتج جديد" href="#"
+                                    style="width : 200px;">
+                                    <small
+                                        style="position: relative;
+                                            top: -50%;">
+                                        صنف المنتج
+                                    </small>
+                                </a>
+                            
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            
+        </div>
+
+        <div class=" p-2">
+
+            <button type="button"  data-product-id="2312" data-product-type="default"
+                data-inline-loader=""
+                class="btn btn-light border-slate text-slate-800 btn-flat btn-xs product-option-modal-btn mb-2">
+                <i class="fa-solid fa-sliders"></i>
+                بيانات المنتج
+            </button>
+            <button href="#" type="button" style="width: 100%;" data-product-id="2312"
+                id="submit-btn-2312"
+                class="btn btn-primary submit-btn product-field edit-product">
+                <i data-feather="check-circle" class="me-2"></i>
+                حفظ
+            </button>
+
+        </div>
+
+    </div>
+    </form>
+
+
+
+
+
+</div>
+                                                                    
+                                    <div class="card m-2 empty-product" id="product-2311"
+    style="width: 20rem; ">
+
+            <a class="bs-pass-para btn btn-sm btn-icon btn-danger delete-btn"
+            href="#" data-title="حذف الرصاص" data-confirm="هل أنت متأكد؟"
+            data-text="لا يمكن التراجع عن هذا الإجراء. "
+            data-confirm-yes="delete-form-2311" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="حذف" style="position: absolute; opacity: 0.8; ">
+            <i class="fa-solid fa-xmark"></i>
+        </a>
+        <form method="POST" action="https://doin9.com/product/2311" accept-charset="UTF-8" id="delete-form-2311" class="delete-form"><input name="_method" type="hidden" value="DELETE"><input name="_token" type="hidden" value="i96nJyLSfclvwPq4DQqHZg4PefSvaWwPYCMvZ0BF">
+        </form>
+    
+
+    <form method="POST" action="https://doin9.com/product/store" accept-charset="UTF-8" id="frmTarget" enctype="multipart/form-data"><input name="_token" type="hidden" value="i96nJyLSfclvwPq4DQqHZg4PefSvaWwPYCMvZ0BF">
+
+    
+
+    <input type="hidden" class="product-type" name="type" id="" value="default">
+
+    <div id="product-dropzone" style="display: none">
+
+    </div>
+
+
+    <!-- //////////////////////////////////// -->
+
+
+
+
+
+    
+
+    <div class="product-wrapper">
+
+
+        <div class="caption caption-small " style="width:100%;">
+            <div class=" product-fields">
+
+                <div class="group-1">
+                    <div class="thumb">
+                        <div class="thumb-mask m-auto" style="width:100%; height: 300px;">
+                            <img id="coverImg-2311"
+                                class="rounded-top coverImg coverImg-2311"
+                                src="https://doin9.com/storage/uploads/is_cover_image/ق_1703599981.jpg"
+                                alt="">
+
+
+                            <div class="product-check rec-checkbox rec-checkbox--default rec-checkbox--large rec-checkbox--primary-bg"
+                                style="display: none;"><input type="checkbox" id="product_-363987222"
+                                    autocomplete="off" class="product-check"> <label for="product_-363987222"><span
+                                        class="form-label">منتج جاهز</span></label>
+                            </div>
+                            <button type="button" data-product-id="2311" data-inline-loader=""
+                                class="btn btn-light bg-light product-image-text product-image-modal"
+                                data-bs-toggle="modal" data-bs-target="#assign_img_product_modal"
+                                style="z-index: unset">
+                                <span style="position: relative;
+                                top: -2px;">
+                                    اختر ملف
+                                </span>
+                                <i class="fa-regular fa-image" style=""></i>
+
+                            </button>
+                            <button type="button" class="pin_btn" style="display: none;">
+                                <i class="sicon-thumbtack"></i></button>
+                        </div>
+
+                    </div>
+
+                    <div class="">
+                        <div id="" class="p-2 tooltip-toggle trans top " required="required">
+                            <div class="input-group border" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="اسم">
+                                <span class="input-group-addon input-group-addon-small btn btn-light disabled"
+                                    style="opacity: 0.5; z-index: unset;"><i
+                                        class="fa-solid fa-box-archive product-name-icon"></i></span>
+                                
+                                <input class="form-control product-field product-name" id="product-name-2311" placeholder="أدخل الاسم" required="required" name="name" type="text" value="مقص كهربائي قابل للشحن">
+                                <!---->
+                            </div>
+                        </div>
+                        <div class=" p-2 product-price-small-screen ">
+
+                            <div class="input-group border " data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="سعر">
+                                <span class="input-group-addon input-group-addon-small btn btn-light disabled"
+                                    style="opacity: 0.5 ;z-index: unset;">
+                                    <i class="fa-solid fa-money-bills"></i>
+                                </span>
+                                <input step="any" placeholder="سعر" id="product-price-2311" class="form-control product-field product-price" name="price" type="number" value="23500">
+                                <span class="btn btn-light input-group-prepend disabled" style="z-index: unset">
+                                    ر.ي
+                                </span>
+
+                            </div>
+                            <!---->
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="group-2" style="width: 100%;">
+
+                    <div class="product-quantity-div p-2">
+                        <div class=" ">
+                            <div class="input-group ">
+
+                                <div class="d-flex flex-row border" style="width: 100%;height: 43.3px">
+                                    <span
+                                        class="input-group-addon input-group-addon-small btn btn-light disabled m-auto"
+                                        style="opacity: 0.5 ;z-index: unset;">
+                                        <i class="fa-solid fa-box-open"></i>
+                                    </span>
+                                    <input class="form-control product-field product-quantity" placeholder="أدخل كمية المخزون" style="width:30%" required="required" name="quantity" type="text" value="5">
+
+                                    <button type="button" data-bs-toggle="modal" onclick="show_toastr('error','الخدمة غير متاحة' , 'error');"
+
+                                        data-bs-target="#bell_product_modal" class="btn btn-light"
+                                        style="z-index: unset;padding: 2%;border-radius:unset ; cursor: not-allowed;"><i
+                                            class="fa-regular fa-bell"></i>
+                                    </button>
+
+
+                                    <button type="button" class="btn btn-light"
+                                    onclick= "console.log($(this).closest('.product-quantity')); $(this).closest('.product-quantity').val('unlimited'); "
+                                        style="z-index: unset; padding: 2%; border-radius:unset"><svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px"
+                                            height="30px">
+                                            <path
+                                                d="M 8 8 C 3.6102416 8 0 11.595515 0 16 C 0 20.400585 3.599415 24 8 24 C 10.646 24 12.420344 22.745203 13.777344 21.033203 C 13.147344 20.063203 12.616672 19.057234 12.138672 18.115234 C 10.996672 19.940234 9.828 21 8 21 C 5.220585 21 3 18.779415 3 16 C 3 13.224485 5.2377584 11 8 11 C 9.4265669 11 10.267624 11.520682 11.15625 12.525391 C 12.044876 13.530099 12.834942 15.048526 13.652344 16.673828 C 14.469745 18.29913 15.315394 20.031983 16.585938 21.464844 C 17.85648 22.897705 19.696851 24 22 24 C 26.362802 24 30 20.414234 30 16 C 30 11.599415 26.400585 8 22 8 C 19.35 8 17.576703 9.2652813 16.220703 10.988281 C 16.849703 11.961281 17.379422 12.969109 17.857422 13.912109 C 19.003422 12.069109 20.172 11 22 11 C 24.779415 11 27 13.220585 27 16 C 27 18.765766 24.719198 21 22 21 C 20.566649 21 19.72091 20.477295 18.830078 19.472656 C 17.939247 18.468017 17.14913 16.95087 16.332031 15.326172 C 15.514933 13.701474 14.671546 11.969901 13.404297 10.537109 C 12.137048 9.1043186 10.298933 8 8 8 z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                    <button type="button" data-inline-loader=""
+                                        class="btn btn-light rounded-left get-variants"
+                                        data-product-id="2311" 
+                                        style="z-index: unset; border-radius: unset;">
+                                        <small
+                                            style="position: relative;
+                                            top: -50%;">
+                                            متغيرات المنتج
+                                        </small>
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!---->
+                    </div>
+                    <div class="product-category p-2">
+                        <div class="d-flex flex-row border" style="width: 100%">
+                            <div class="product-category-div" style="width: 70%">
+
+                                
+                                <select class="form-control multi-select  product-field" id="product-category-2311" multiple name="product_categorie[]"><option value="354">HYUNDAI</option></select>
+
+                            </div>
+                                                            <a class=" btn btn-light btn-icon btn-add-category"
+                                    style=" height: 43.4px; border-radius: unset; width:40%;" data-ajax-popup="true"
+                                    data-url="https://doin9.com/product_categorie/create" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="إنشاء"
+                                    data-title="إنشاء صنف منتج جديد" href="#"
+                                    style="width : 200px;">
+                                    <small
+                                        style="position: relative;
+                                            top: -50%;">
+                                        صنف المنتج
+                                    </small>
+                                </a>
+                            
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            
+        </div>
+
+        <div class=" p-2">
+
+            <button type="button"  data-product-id="2311" data-product-type="default"
+                data-inline-loader=""
+                class="btn btn-light border-slate text-slate-800 btn-flat btn-xs product-option-modal-btn mb-2">
+                <i class="fa-solid fa-sliders"></i>
+                بيانات المنتج
+            </button>
+            <button href="#" type="button" style="width: 100%;" data-product-id="2311"
+                id="submit-btn-2311"
+                class="btn btn-primary submit-btn product-field edit-product">
+                <i data-feather="check-circle" class="me-2"></i>
+                حفظ
+            </button>
+
+        </div>
+
+    </div>
+    </form>
+
+
+
+
+
+</div>
+                                                                    
+                                    <div class="card m-2 empty-product" id="product-2310"
+    style="width: 20rem; ">
+
+            <a class="bs-pass-para btn btn-sm btn-icon btn-danger delete-btn"
+            href="#" data-title="حذف الرصاص" data-confirm="هل أنت متأكد؟"
+            data-text="لا يمكن التراجع عن هذا الإجراء. "
+            data-confirm-yes="delete-form-2310" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="حذف" style="position: absolute; opacity: 0.8; ">
+            <i class="fa-solid fa-xmark"></i>
+        </a>
+        <form method="POST" action="https://doin9.com/product/2310" accept-charset="UTF-8" id="delete-form-2310" class="delete-form"><input name="_method" type="hidden" value="DELETE"><input name="_token" type="hidden" value="i96nJyLSfclvwPq4DQqHZg4PefSvaWwPYCMvZ0BF">
+        </form>
+    
+
+    <form method="POST" action="https://doin9.com/product/store" accept-charset="UTF-8" id="frmTarget" enctype="multipart/form-data"><input name="_token" type="hidden" value="i96nJyLSfclvwPq4DQqHZg4PefSvaWwPYCMvZ0BF">
+
+    
+
+    <input type="hidden" class="product-type" name="type" id="" value="default">
+
+    <div id="product-dropzone" style="display: none">
+
+    </div>
+
+
+    <!-- //////////////////////////////////// -->
+
+
+
+
+
+    
+
+    <div class="product-wrapper">
+
+
+        <div class="caption caption-small " style="width:100%;">
+            <div class=" product-fields">
+
+                <div class="group-1">
+                    <div class="thumb">
+                        <div class="thumb-mask m-auto" style="width:100%; height: 300px;">
+                            <img id="coverImg-2310"
+                                class="rounded-top coverImg coverImg-2310"
+                                src="https://doin9.com/storage/uploads/is_cover_image/ك_1703600413.jpg"
+                                alt="">
+
+
+                            <div class="product-check rec-checkbox rec-checkbox--default rec-checkbox--large rec-checkbox--primary-bg"
+                                style="display: none;"><input type="checkbox" id="product_-363987222"
+                                    autocomplete="off" class="product-check"> <label for="product_-363987222"><span
+                                        class="form-label">منتج جاهز</span></label>
+                            </div>
+                            <button type="button" data-product-id="2310" data-inline-loader=""
+                                class="btn btn-light bg-light product-image-text product-image-modal"
+                                data-bs-toggle="modal" data-bs-target="#assign_img_product_modal"
+                                style="z-index: unset">
+                                <span style="position: relative;
+                                top: -2px;">
+                                    اختر ملف
+                                </span>
+                                <i class="fa-regular fa-image" style=""></i>
+
+                            </button>
+                            <button type="button" class="pin_btn" style="display: none;">
+                                <i class="sicon-thumbtack"></i></button>
+                        </div>
+
+                    </div>
+
+                    <div class="">
+                        <div id="" class="p-2 tooltip-toggle trans top " required="required">
+                            <div class="input-group border" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="اسم">
+                                <span class="input-group-addon input-group-addon-small btn btn-light disabled"
+                                    style="opacity: 0.5; z-index: unset;"><i
+                                        class="fa-solid fa-box-archive product-name-icon"></i></span>
+                                
+                                <input class="form-control product-field product-name" id="product-name-2310" placeholder="أدخل الاسم" required="required" name="name" type="text" value="كوب تبريد وتسخين المشروبات">
+                                <!---->
+                            </div>
+                        </div>
+                        <div class=" p-2 product-price-small-screen ">
+
+                            <div class="input-group border " data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="سعر">
+                                <span class="input-group-addon input-group-addon-small btn btn-light disabled"
+                                    style="opacity: 0.5 ;z-index: unset;">
+                                    <i class="fa-solid fa-money-bills"></i>
+                                </span>
+                                <input step="any" placeholder="سعر" id="product-price-2310" class="form-control product-field product-price" name="price" type="number" value="17500">
+                                <span class="btn btn-light input-group-prepend disabled" style="z-index: unset">
+                                    ر.ي
+                                </span>
+
+                            </div>
+                            <!---->
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="group-2" style="width: 100%;">
+
+                    <div class="product-quantity-div p-2">
+                        <div class=" ">
+                            <div class="input-group ">
+
+                                <div class="d-flex flex-row border" style="width: 100%;height: 43.3px">
+                                    <span
+                                        class="input-group-addon input-group-addon-small btn btn-light disabled m-auto"
+                                        style="opacity: 0.5 ;z-index: unset;">
+                                        <i class="fa-solid fa-box-open"></i>
+                                    </span>
+                                    <input class="form-control product-field product-quantity" placeholder="أدخل كمية المخزون" style="width:30%" required="required" name="quantity" type="text" value="5">
+
+                                    <button type="button" data-bs-toggle="modal" onclick="show_toastr('error','الخدمة غير متاحة' , 'error');"
+
+                                        data-bs-target="#bell_product_modal" class="btn btn-light"
+                                        style="z-index: unset;padding: 2%;border-radius:unset ; cursor: not-allowed;"><i
+                                            class="fa-regular fa-bell"></i>
+                                    </button>
+
+
+                                    <button type="button" class="btn btn-light"
+                                    onclick= "console.log($(this).closest('.product-quantity')); $(this).closest('.product-quantity').val('unlimited'); "
+                                        style="z-index: unset; padding: 2%; border-radius:unset"><svg
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px"
+                                            height="30px">
+                                            <path
+                                                d="M 8 8 C 3.6102416 8 0 11.595515 0 16 C 0 20.400585 3.599415 24 8 24 C 10.646 24 12.420344 22.745203 13.777344 21.033203 C 13.147344 20.063203 12.616672 19.057234 12.138672 18.115234 C 10.996672 19.940234 9.828 21 8 21 C 5.220585 21 3 18.779415 3 16 C 3 13.224485 5.2377584 11 8 11 C 9.4265669 11 10.267624 11.520682 11.15625 12.525391 C 12.044876 13.530099 12.834942 15.048526 13.652344 16.673828 C 14.469745 18.29913 15.315394 20.031983 16.585938 21.464844 C 17.85648 22.897705 19.696851 24 22 24 C 26.362802 24 30 20.414234 30 16 C 30 11.599415 26.400585 8 22 8 C 19.35 8 17.576703 9.2652813 16.220703 10.988281 C 16.849703 11.961281 17.379422 12.969109 17.857422 13.912109 C 19.003422 12.069109 20.172 11 22 11 C 24.779415 11 27 13.220585 27 16 C 27 18.765766 24.719198 21 22 21 C 20.566649 21 19.72091 20.477295 18.830078 19.472656 C 17.939247 18.468017 17.14913 16.95087 16.332031 15.326172 C 15.514933 13.701474 14.671546 11.969901 13.404297 10.537109 C 12.137048 9.1043186 10.298933 8 8 8 z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                    <button type="button" data-inline-loader=""
+                                        class="btn btn-light rounded-left get-variants"
+                                        data-product-id="2310" 
+                                        style="z-index: unset; border-radius: unset;">
+                                        <small
+                                            style="position: relative;
+                                            top: -50%;">
+                                            متغيرات المنتج
+                                        </small>
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!---->
+                    </div>
+                    <div class="product-category p-2">
+                        <div class="d-flex flex-row border" style="width: 100%">
+                            <div class="product-category-div" style="width: 70%">
+
+                                
+                                <select class="form-control multi-select  product-field" id="product-category-2310" multiple name="product_categorie[]"><option value="354">HYUNDAI</option></select>
+
+                            </div>
+                                                            <a class=" btn btn-light btn-icon btn-add-category"
+                                    style=" height: 43.4px; border-radius: unset; width:40%;" data-ajax-popup="true"
+                                    data-url="https://doin9.com/product_categorie/create" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" title="إنشاء"
+                                    data-title="إنشاء صنف منتج جديد" href="#"
+                                    style="width : 200px;">
+                                    <small
+                                        style="position: relative;
+                                            top: -50%;">
+                                        صنف المنتج
+                                    </small>
+                                </a>
+                            
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            
+        </div>
+
+        <div class=" p-2">
+
+            <button type="button"  data-product-id="2310" data-product-type="default"
+                data-inline-loader=""
+                class="btn btn-light border-slate text-slate-800 btn-flat btn-xs product-option-modal-btn mb-2">
+                <i class="fa-solid fa-sliders"></i>
+                بيانات المنتج
+            </button>
+            <button href="#" type="button" style="width: 100%;" data-product-id="2310"
+                id="submit-btn-2310"
+                class="btn btn-primary submit-btn product-field edit-product">
+                <i data-feather="check-circle" class="me-2"></i>
+                حفظ
+            </button>
+
+        </div>
+
+    </div>
+    </form>
+
+
+
+
+
+</div>
+                                
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                    <div class="rec-placeholder text-center mh-auto" style="display: none;">
+                        <div class="rec-placeholder__icon"><i class="fa-solid fa-inbox"></i></div>
+                        <h2 class="rec-placeholder__title">
+                            لا يوجد لديك منتجات حاليا
+                        </h2>
+                        <p class="rec-placeholder__desc">ابدأ رحلتك التجارية بإضافة اول منتج بالنقر على زر إضافة
+                            منتج جديد</p>
+                        <button class="btn btn-tiffany">استخدم نموذج جاهز</button>
+                    </div>
+
+                </div>
+
+
+                <div id="product_options"></div>
+                <div id="product_category_div"></div>
+                <div id="product_category"></div>
+                <div id="product_quantity_management"></div>
+                <div id="products_view"></div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+    <style>
+        .choices__inner {
+            height: 43.4px;
+            overflow: scroll;
+            border: unset;
+            border-bottom-left-radius: unset;
+            border-top-left-radius: unset;
+        }
+
+
+        .thumb-mask img {
+            bottom: 0;
+            display: block;
+            height: 100%;
+            left: 0;
+            -o-object-fit: cover;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .product-image-text {
+            position: absolute;
+            top: 250px;
+            right: 200px;
+            background: var(--color-white);
+            border: 1px solid var(--color-secondary);
+            color: var(--color-primary-l);
+            border-radius: 99px;
+            padding: 6px 12px;
+            font-size: 12px;
+            z-index: 20;
+
+        }
+
+        .form-control {
+            border: unset;
+            display: block;
+            width: 100%;
+            padding: 0.575rem 1rem;
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #293240;
+            background-color: #ffffff;
+            background-clip: padding-box;
+            /* border: 3px solid #ced4da; */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            /* border-radius: 6px; */
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+
+        .color-picker .button
+        {
+            width: 40px;
+            height: 40px;
+        }
+
+        /* //mobiel view of flex  */
+        @media only screen and (max-width: 767px) {
+
+            .product-wrapper,
+            .product-fields {
+                /* display: flex; */
+                flex-wrap: wrap;
+                /* padding: 1%; */
+            }
+
+            /* .product-image-text {
+                    position: absolute;
+                    top: 10px;
+                    right: 200px;
+                    background: var(--color-white);
+                    border: 1px solid var(--color-secondary);
+                    color: var(--color-primary-l);
+                    border-radius: 99px;
+                    padding: 6px 12px;
+                    font-size: 12px;
+                    z-index: 20;
+                } */
+            /* .group-1
+                {
+                    display: flex;
+                } */
+        }
+    </style>
+
+
+
+
+    <script>
+        $(document).ready(function() {
+
+            if ($("#enable_product_variant").prop('checked') == false) {
+                $("#enable_product_variant").click(function() {
+                    if ($("#enable_product_variant").prop('checked') == true) {
+                        $('#hiddenhidden').val('now_in_var');
+                    } else {
+
+                        $('#hiddenhidden').val('');
+                    }
+                })
+            }
+        });
+    </script>
+        </div>
+    </div>
+
+    <div class="modal fade" id="commonModal" tabindex="-1" role="dialog" aria-labelledby="commonModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="commonModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="commonModalOver" tabindex="-1" role="dialog" aria-labelledby="commonModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="commonModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="dash-footer">
+    <div class="footer-wrapper">
+        <div class="py-1">
+                      <span class="text-muted">&copy;  حقوق النشر  Doing 2024</span>
+
+            <!--<span class="text-muted">&copy; حقوق النشر  Doing 2024</span>-->
+        </div>
+    </div>
+</footer>
+<!-- Required Js -->
+<script src="https://doin9.com/custom/js/jquery.min.js"></script>
+<script src="https://doin9.com/assets/js/plugins/popper.min.js"></script>
+<script src="https://doin9.com/assets/js/plugins/perfect-scrollbar.min.js"></script>
+<script src="https://doin9.com/assets/js/plugins/bootstrap.min.js"></script>
+<script src="https://doin9.com/assets/js/plugins/feather.min.js"></script>
+<script src="https://doin9.com/assets/js/dash.js"></script>
+<script src="https://doin9.com/assets/js/plugins/sweetalert2.all.min.js"></script>
+
+<script src="https://doin9.com/custom/libs/bootstrap-notify/bootstrap-notify.min.js"></script>
+<script src="https://doin9.com/custom/libs/select2/dist/js/select2.min.js"></script>
+<script src="https://doin9.com/custom/libs/moment/min/moment.min.js"></script>
+<script src="https://doin9.com/custom/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+<script src="https://doin9.com/custom/libs/fullcalendar/dist/fullcalendar.min.js"></script>
+<script src="https://doin9.com/custom/libs/flatpickr/dist/flatpickr.min.js"></script>
+<script src="https://doin9.com/custom/libs/quill/dist/quill.min.js"></script>
+<script src="https://doin9.com/custom/libs/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+<script src="https://doin9.com/custom/libs/autosize/dist/autosize.min.js"></script>
+<script src="https://doin9.com/custom/js/jquery-ui.min.js"></script>
+<script src="https://doin9.com/custom/js/repeater.js"></script>
+<script src="https://doin9.com/custom/js/letter.avatar.js"></script>
+<script src="https://doin9.com/assets/js/plugins/choices.min.js"></script>
+<script src="https://doin9.com/assets/js/plugins/simple-datatables.js"></script>
+<script src="https://doin9.com/assets/js/plugins/bootstrap-switch-button.min.js"></script>
+<script src="https://doin9.com/custom/libs/dropzone/dist/min/dropzone.min.js"></script>
+<script src="https://doin9.com/custom/libs/progressbar.js/dist/progressbar.min.js"></script>
+<script src="https://doin9.com/custom/libs/summernote/summernote-bs4.js"></script>
+<script type="text/javascript" src="https://doin9.com/custom/js/custom.js"></script>
+
+    <!-- Bootstrap CDN -->
+    
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap-Iconpicker Bundle -->
+    <script  src="https://doin9.com/assets/plugins/bootstrap-iconpicker/js/iconset/fontawesome5-3-1.min.js"></script>
+<script  src="https://doin9.com/assets/plugins/bootstrap-iconpicker/js/bootstrap-iconpicker.min.js"></script>
+
+
+<!-- Apex Chart -->
+<script src="https://doin9.com/assets/js/plugins/apexcharts.min.js"></script>
+
+<script src="https://doin9.com/assets/js/plugins/intro.min.js"></script>
+  
+
+
+
+
+    <script src="https://doin9.com/assets/js/plugins/tool-cool-color.js"></script>
+
+    <script src="https://doin9.com/assets/js/plugins/tinymce/tinymce.min.js"></script>
+    <script>
+        if ($(".pc-tinymce-2").length) {
+            tinymce.init({
+                selector: 'textarea.pc-tinymce-2',
+                height: "400",
+                content_style: 'body { font-family: "Inter", sans-serif; }'
+            });
+        }
+    </script>
+    <script src="https://doin9.com/custom/libs/summernote/summernote-bs4.js"></script>
+    <script>
+        $(document).on('click', '#billing_data', function() {
+            $("[name='shipping_address']").val($("[name='billing_address']").val());
+            $("[name='shipping_city']").val($("[name='billing_city']").val());
+            $("[name='shipping_state']").val($("[name='billing_state']").val());
+            $("[name='shipping_country']").val($("[name='billing_country']").val());
+            $("[name='shipping_postalcode']").val($("[name='billing_postalcode']").val());
+        })
+    </script>
+
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#blah').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#imgInp").change(function() {
+            readURL(this);
+        });
+    </script>
+
+
+    <script>
+        //product image modal need these variables
+        var files = [];
+
+        var temp = {};
+        //
+
+        //default
+        $('.product-image-modal').click(function() {
+            id = $(this).attr('data-product-id');
+            product_image(id, type = "edit");
+        });
+
+        $('.product-price').on("input", function() {
+
+            let id = $(this).closest('.empty-product').attr('id');
+            $('#' + id + ' .product-price').val($(this).val());
+        });
+
+        function product_image(id, type) {
+            // id = $(this).attr('data-product-id');
+
+            // let url = "https://doin9.com/product/__id/update".replace('__id', id);
+            // let method = "PUT";
+
+            files = [];
+
+            if (type == "create") {
+                // url = "https://doin9.com/product/store";
+                // method = "POST";
+                id = 'temp-' + id;
+            }
+
+            $('#loading').addClass('loading').css('z-index', '2000');
+            $('#loader').addClass('loader').css('z-index', '2000');
+
+
+            $('#assign_img_product_modal .modal-body').html('');
+
+            jQuery.ajaxSetup({
+                async: false
+            });
+            $.get("https://doin9.com/product/image/__id".replace('__id', id),
+                function(data) {
+                    $('#assign_img_product_modal .modal-body').html(data);
+                    $('#loading').removeClass('loading');
+                    $('#loader').removeClass('loader');
+
+                }
+            ).fail(function(error) {
+            });
+
+            jQuery.ajaxSetup({
+                async: true
+            });
+
+            var key = 0;
+
+
+        }
+
+
+        function product_edit(id, new_id, type) {
+            let url = "https://doin9.com/product/__id/update".replace('__id', new_id);
+
+
+            if (type == 'create') {
+                id = 'temp-' + id;
+            }
+
+
+            $("#product-" + id + ' #cost').trigger('keyup');
+
+
+            // if(!fd)
+            // {
+            var fd = new FormData();
+            // }
+            // fd.append(temp);
+
+
+            var file = temp['product-cover-image-'+id];
+            // var file = document.getElementById('is_cover_image').files[0];
+            if (file) {
+                fd.append('is_cover_image', file);
+            }
+
+
+            $.each(temp['product-images-'+id], function(key, file) {
+              
+                fd.append('multiple_files[' + key + ']', file); // attach dropzone image element
+            });
+
+
+            //alt
+            fd.append('alt', temp['product-alt-' + id]);
+
+
+            //options
+            $.each(temp['product-option-' + id], function(name, value) {
+                fd.append(name, value); // attach dropzone image element
+            });
+
+
+            //attachment
+            $.each(temp['product-attachment-' + id], function(name, attachment) {
+                fd.append('attachment[' + name + ']', attachment);
+            });
+
+
+
+
+            if (temp['product-variant-' + id]) {
+
+
+                fd.append('enable_product_variant', 'on'); // variant on
+                fd.append('hiddenhidden', 'now_in_var'); // variant on
+
+                fd.append('variants', JSON.stringify(temp['product-variant-' + id])); // variant on
+
+                // $.each(temp['product-variant-'+id] , function(key, variant) {
+                //     fd.append('variants[' + key + ']',JSON.stringify(variant)); // attach variant array
+                // });
+
+
+
+            }
+
+
+            fd.append('product_display', 'on'); // product display on
+
+
+            // $("#product-" + id + ' #description').val(tinyMCE.get("description").getContent())
+            // $('#specification').val(tinyMCE.get("specification").getContent())
+            // $('#detail').val(tinyMCE.get("detail").getContent())
+            var other_data = $("#product-" + id + ' #frmTarget').serializeArray();
+            $.each(other_data, function(key, input) {
+                fd.append(input.name, input.value);
+            });
+
+
+            $('#loading').addClass('loading');
+            $('#loader').addClass('loader');
+            $('body').addClass('no-scroll');
+            $.ajax({
+                url: url,
+                type: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                data: fd,
+                contentType: false,
+                processData: false,
+                success: function(data) {
+                    $('#loading').removeClass('loading');
+                    $('#loader').removeClass('loader');
+                    $('body').removeClass('no-scroll');
+                    if (data.flag == "success") {
+                        files = [];
+                        delete temp['product-images-'+id];
+                        delete temp['product-cover-image-'+id];
+                        show_toastr('success', data.msg, 'success');
+                        // window.location.href = "https://doin9.com/product";
+                    } else {
+                        show_toastr('Error', data.msg, 'error');
+                    }
+                },
+                error: function(data) {
+                    if (data.error) {
+                        show_toastr('Error', data.error, 'error');
+                    } else {
+                        show_toastr('Error', 'قم باعلامنا، إذا رأيت خطأ غير معروف',
+                            'error');
+                    }
+                },
+            });
+        }
+
+        function product_variant(id) {
+            let url = "https://doin9.com/product/variant/variant/__id".replace('__id', id);
+
+            $("#commonModal .modal-title").html('أضف المتغيرات');
+            $("#commonModal .modal-dialog").addClass('modal-lg');
+            $("#commonModal").modal('show');
+
+
+            $('#loading').addClass('loading').css('z-index', '2000');
+            $('#loader').addClass('loader').css('z-index', '2000');
+
+            $('#commonModal .modal-body').html('');
+
+
+            $.get(url, {}, function(data) {
+                $('#commonModal .modal-body').html(data);
+                $('#loading').removeClass('loading');
+                $('#loader').removeClass('loader');
+
+            }).fail(function(error) {
+                console.log(error);
+            });
+
+
+
+        }
+
+        $('.product-option-modal-btn').on('click', function() {
+            let type = $(this).attr('data-product-type');
+            let id = $(this).attr('data-product-id');
+
+            if (type == "digital") {
+                temp['product-' + id + '-type'] = 'digital';
+            }
+            product_option(id);
+        });
+
+        //edit product srcipts
+        $(".edit-product").on('click', function(e) {
+            e.preventDefault();
+            let id = $(this).attr('data-product-id');
+            product_edit(id, id, 'edit');
+        });
+
+        // var id ;
+
+        $(document).on('click', '.get-variants', function() {
+            id = $(this).attr('data-product-id');
+
+            product_variant(id);
+        });
+
+
+        //product details
+        function product_option(id) {
+
+            let url = "https://doin9.com/product/variant/option/__id".replace('__id', id);
+
+            $("#commonModal .modal-title").html('تفاصيل المنتج');
+            $("#commonModal .modal-dialog").addClass('modal-lg');
+            $("#commonModal").modal('show');
+
+
+            $('#loading').addClass('loading').css('z-index', '2000');
+            $('#loader').addClass('loader').css('z-index', '2000');
+
+
+            $('#commonModal .modal-body').html('');
+
+
+            
+            temp['product-'+id+'-type'] = $("#product-" + id + "  .product-type").val();
+
+
+            $.get(url, {}, function(data) {
+                $('#commonModal .modal-body').html(data);
+                $('#loading').removeClass('loading');
+                $('#loader').removeClass('loader');
+            }).fail(function(error) {
+                console.log(error);
+            });
+        }
+
+        $(".create-product-btn").click(function() {
+            let count = $('.empty-product').length;
+            let id = count + 1;
+            let product_type = $(this).attr('data-type');
+
+
+
+            $(".empty-product:first").clone().css('display', 'block').attr('id', 'product-temp-' + id).prependTo(
+                ".products");
+
+            $("#product-temp-" + id + "  .product-name-icon").removeClass("fa-gamepad").addClass("fa-box-archive");
+
+
+            $("#product-temp-" + id + "  .product-type").val('default');
+
+            if (product_type == "digital") {
+                $("#product-temp-" + id + "  .product-option-modal-btn").attr('data-product-type', 'digital');
+                $("#product-temp-" + id + "  .product-type").val('digital');
+                $("#product-temp-" + id + "  .product-name-icon").removeClass("fa-box-archive").addClass(
+                    "fa-gamepad");
+            }
+            $("#product-temp-" + id + "  .product-name").attr('id', "product-temp-name-" + id).val('');
+            $("#product-temp-" + id + "  .product-price").attr('id', "product-temp-price-" + id).val('');
+            $("#product-temp-" + id + "  .product-last-price").attr('id', "product-temp-last-price-" + id).val('');
+            $("#product-temp-" + id + "  .product-quantity").attr('id', "product-temp-quantity-" + id).val('');
+            $("#product-temp-" + id + "  .product-weight").attr('id', "product-temp-weight-" + id).val('');
+            // $("#product-temp-" + id + "  .product-category").attr('id',"product-temp-category-"+ id);
+            product_category(id);
+
+            $("#product-temp-" + id + " .coverImg").attr({
+                'src': 'https://doin9.com/storage/uploads/is_cover_image/default.jpg',
+                'id': 'coverImg-temp-' + id
+            });
+
+            let temp = 'cover-image-temp-' + id;
+
+            $("#product-temp-" + id + " .cover-image").attr({
+                'onchange': "$('#coverImg-temp-" + id +
+                    "').attr('src', window.URL.createObjectURL(this.files[0]) ) ;",
+                'id': temp
+            });
+
+            $("#product-temp-" + id + "  .dropzone").attr('id', "dropzone-temp-" + id);
+
+            $("#product-temp-" + id + " .product-image-modal").attr('data-product-id', 'temp-' + id);
+
+            $("#product-temp-" + id + "  .submit-btn").attr('id', "submit-temp-btn-" + id);
+
+
+            $("#product-temp-" + id + "  .product-field").css('opacity', '0.5');
+
+            $("#product-temp-" + id + "  .submit-btn").removeClass('edit-product').addClass('create-product');
+
+            $("#product-temp-" + id + "  .delete-btn").removeClass('bs-pass-para');
+            $("#product-temp-" + id + "  .delete-btn").attr('data-confirm-yes', 'delete-form-temp-' + id);
+
+            $("#product-temp-" + id + ' .delete-form').attr('id', 'delete-form-temp-' + id);
+
+            create_script(id);
+
+        });
+
+
+        function create_script(id) {
+            //url
+            let url = "https://doin9.com/product/store";
+            let method = "POST";
+            let new_id;
+            // Dropzones.disable();
+
+
+            //default
+            $("#product-temp-" + id + ' .product-image-modal').click(function() {
+                product_image(id, 'create');
+            });
+
+
+            //digital options
+
+            $("#product-temp-" + id + ' .product-option-modal-btn').on('click', function() {
+                let type = $(this).attr('data-product-type');
+                temp['product-temp-' + id + '-type'] = 'digital';
+
+                if (type == "digital") {
+                    temp['product-temp-' + id + '-type'] = 'digital';
+                }
+                product_option('temp-' + id);
+            });
+
+
+
+
+            // create product
+            $("#product-temp-" + id + " .create-product").on('click', function() {
+                // $('.create-product').on('click', function() {
+                // $(this).preventDefault();
+
+                if (new_id) {
+                    product_edit(id, new_id, "create");
+
+                } else {
+
+                    var test = $(this);
+
+                    $(this).attr('disabled', true);
+                    var fd = new FormData();
+
+                    // var file = document.getElementById("product-"+id).getElementsByClassName("is_cover_image").files[0];
+                    var file = temp['product-cover-image-temp-'+id];
+
+                    if (file) {
+                        fd.append('is_cover_image', file);
+                    }
+
+
+                    $.each(temp['product-images-temp-'+id], function(key, file) {
+                        fd.append('multiple_files[' + key + ']',file); // attach dropzone image element
+                    });
+
+
+                    //alt
+                    fd.append('alt', temp['product-alt-temp-' + id]);
+
+                    //product option
+                    let option;
+                    $.each(temp['product-option-temp-' + id], function(name, value) {
+                        option = value;
+
+                        fd.append(name, option); // product options
+
+                    });
+
+
+                    //attachment
+                    $.each(temp['product-attachment-temp-' + id], function(name, attachment) {
+                        // $.each(attachment, function(name, value) {
+                        //     attachment = JSON.stringify(value);
+                        // });
+                        fd.append('attachment[' + name + ']', attachment);
+
+                    });
+
+                    if (temp['product-variant-temp-' + id]) {
+                       
+
+                        fd.append('enable_product_variant', 'on'); // variant on
+                        fd.append('hiddenhidden', 'now_in_var'); // variant on
+
+                        fd.append('variants', JSON.stringify(temp['product-variant-temp-' + id])); // variant on
+
+                        // $.each(temp['product-variant-'+id] , function(key, variant) {
+                        //     fd.append('variants[' + key + ']',JSON.stringify(variant)); // attach variant array
+                        // });
+
+                       
+
+                    }
+
+
+                    fd.append('product_display', 'on'); // product display on
+
+                    // $('#product-temp-' + id + ' #description').val(tinyMCE.get("description").getContent())
+                    // $('#specification').val(tinyMCE.get("specification").getContent())
+                    // $('#detail').val(tinyMCE.get("detail").getContent())
+                    var other_data = $('#product-temp-' + id + ' #frmTarget').serializeArray();
+
+
+                    $.each(other_data, function(key, input) {
+                        fd.append(input.name, input.value);
+                    });
+                    fd.append('time', "1707416765");
+
+
+                    $('#loading').addClass('loading');
+                    $('#loader').addClass('loader');
+                    $('body').addClass('no-scroll');
+
+                    $.ajax({
+                        type: 'POST',
+                        url: "https://doin9.com/product/store",
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        data: fd,
+                        contentType: false,
+                        processData: false,
+                        success: function(data) {
+                            test.removeAttr("disabled");
+
+
+                            $('#loading').removeClass('loading');
+                            $('#loader').removeClass('loader');
+                            $('body').removeClass('no-scroll');
+
+                            if (data.flag == "success") {
+                                files = [];
+                                delete temp['product-images-temp-'+id];
+                                delete temp['product-cover-image-temp-'+id];
+
+
+                                $('.delete-btn').addClass('bs-pass-para');
+                                $("#product-temp-" + id + "  .product-field").css('opacity', '1');
+
+
+                                test.addClass('edit-product').removeClass('create-product');
+                                show_toastr('success', data.msg, 'success');
+
+                                if (data.id) {
+                                    new_id = data.id;
+                                    let action = "https://doin9.com/product/__id".replace(
+                                        '__id', new_id);
+                                    $("#product-temp-" + id + ' .delete-form').attr('action', action);
+                                }
+                                // window.location.href = "https://doin9.com/product";
+                            } else {
+                                show_toastr('Error', data.msg, 'error');
+                            }
+                        },
+                        error: function(data) {
+                            console.log(data);
+                            $('#loading').removeClass('loading');
+                            $('#loader').removeClass('loader');
+                            $('body').removeClass('no-scroll');
+                            // test.attr('disabled', false);
+                            test.removeAttr("disabled");
+
+                            // Dropzones.removeFile(file);
+                            if (data.error) {
+                                show_toastr('Error', data.error, 'error');
+                            } else {
+                                show_toastr('Error',
+                                    'قم باعلامنا، إذا رأيت خطأ غير معروف',
+                                    'error');
+                            }
+                        },
+                    });
+                }
+
+            });
+
+
+            $("#product-temp-" + id + " .delete-btn").on('click', function() {
+                if (new_id) {
+                    $("#product-temp-" + id + ' .btn').trigger("click");
+
+                } else {
+                    $("#product-temp-" + id).remove();
+                    delete temp['product-images-temp-'+id];
+
+                }
+
+            });
+
+            $("#product-temp-" + id + ' .get-variants').on('click', function() {
+                product_variant('temp-' + id);
+            });
+
+
+            $("#product-temp-" + id + ' .product-price').on("input", function() {
+                let id = $(this).closest('.empty-product').attr('id');
+                $('#' + id + ' .product-price').val($(this).val());
+            });
+
+        }
+
+
+        function product_category(id) {
+
+            id = 'temp-' + id;
+            jQuery.ajaxSetup({
+                async: false
+            });
+            $.get("https://doin9.com/product/category/__id".replace('__id', id),
+                function(data) {
+                    // $('#temp').html(data);
+                    $('#product-' + id + ' .product-category').html(data);
+                    // $('#temp').html('');
+                }
+            ).fail(function(error) {
+                console.log(error);
+            });
+
+            jQuery.ajaxSetup({
+                async: true
+            });
+
+            if ($(".multi-select").length > 0) {
+                $($(".multi-select")).each(function(index, element) {
+                    var id = $(element).attr('id');
+                    var multipleCancelButton = new Choices(
+                        '#' + id, {
+                            removeItemButton: true,
+                        }
+                    );
+                });
+            }
+
+        }
+
+
+        function view_type(type = 'grid') {
+
+            $('#grid-view').css('display', 'none');
+            $('#list-view').css('display', 'none');
+
+
+            //default style
+            $('.empty-product').css({
+                'width': ' 20rem'
+
+            });
+
+            $('.product-fields').css('display', 'block');
+            $('.product-wrapper').css('display', 'block');
+            $('.group-1').css('display', 'block');
+
+            $('.thumb-mask').css('height', '300px');
+            // grid or list ??
+            if (type == 'list') {
+                $('#grid-view').css('display', 'inline-block');
+
+                $('.product-image-text').css('top', '90px');
+                $('.product-image-text').css('right', '10px');
+
+
+
+                $('.empty-product').css({
+                    'width': '100%'
+
+                });
+
+                $('.product-fields').css({
+                    'display': 'flex',
+                    // 'flex-wrap': 'wrap',
+
+                });
+
+                $('.product-wrapper').css({
+                    'display': 'flex',
+                    // 'flex-wrap': 'wrap',
+
+                });
+
+                $('.group-1').css('display', 'flex');
+
+                $('.thumb-mask').css('height', '130px');
+
+            } else {
+
+                $('.product-image-text').css('top', '250px');
+                $('.product-image-text').css('right', '200px');
+
+                $('#list-view').css('display', 'inline-block');
+
+
+
+            }
+        }
+    </script>
+       <script src="https://doin9.com/assets/js/plugins/wcolpick.js"></script>
+
+            <link rel='stylesheet' href='https://doin9.com/css/cookieconsent.css' media="screen" />
+<script src="https://doin9.com/js/cookieconsent.js"></script>
+<script>
+    let language_code = document.documentElement.getAttribute('lang');
+    let languages = {};
+    languages[language_code] = {
+        consent_modal: {
+            title: 'hello',
+            description: 'description',
+            primary_btn: {
+                text: 'primary_btn text',
+                role: 'accept_all'
+            },
+            secondary_btn: {
+                        text: 'secondary_btn text',
+                        role: 'accept_necessary'
+                    }
+                },
+                settings_modal: {
+                    title: 'settings_modal',
+                    save_settings_btn: 'save_settings_btn',
+                    accept_all_btn: 'accept_all_btn',
+                    reject_all_btn: 'reject_all_btn',
+                    close_btn_label: 'close_btn_label',
+                    blocks: [{
+                            title: 'block title',
+                            description: 'block description'
+                        },
+
+                        {
+                            title: 'title',
+                            description: 'description',
+                            toggle: {
+                                value: 'necessary',
+                                enabled: true,
+                                readonly: false
+                            }
+                        },
+                    ]
+                }
+            };
+            </script>
+        <script>
+            function setCookie(cname, cvalue, exdays) {
+                const d = new Date();
+                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                let expires = "expires=" + d.toUTCString();
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+            
+            function getCookie(cname) {
+                let name = cname + "=";
+                let decodedCookie = decodeURIComponent(document.cookie);
+                let ca = decodedCookie.split(';');
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+            
+            
+            // obtain plugin
+            var cc = initCookieConsent();
+            // run plugin with your configuration
+            cc.run({
+                current_lang: 'en',
+                autoclear_cookies: true, // default: false
+                page_scripts: true,
+                // ...
+                gui_options: {
+                    consent_modal: {
+                        layout: 'cloud', // box/cloud/bar
+                        position: 'bottom center', // bottom/middle/top + left/right/center
+                        transition: 'slide', // zoom/slide
+                        swap_buttons: false // enable to invert buttons
+                    },
+                    settings_modal: {
+                        layout: 'box', // box/bar
+                        // position: 'left',           // left/right
+                        transition: 'slide' // zoom/slide
+                    }
+                },
+               
+                onChange: function(cookie, changed_preferences) {},
+                onAccept: function(cookie) {
+                    if (!getCookie('cookie_consent_logged')) {
+                        var cookie = cookie.level;
+                        $.ajax({
+                            url: 'https://doin9.com/cookie-consent',
+                            datType: 'json',
+                            data: {
+                                cookie: cookie,
+                            },
+                        })
+                        setCookie('cookie_consent_logged', '1', 182, '/');
+                    }
+                },
+                
+                languages: {
+                    'en': {
+                        consent_modal: {
+                            title: "We use cookies!",
+                            description: 'Hi, this website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it.. <button type="button" data-cc="c-settings" class="cc-link">دعني اختار</button>',
+                            primary_btn: {
+                                text: 'Accept all',
+                                role: 'accept_all' // 'accept_selected' or 'accept_all'
+                            },
+                            secondary_btn: {
+                                text: 'Reject all',
+                                role: 'accept_necessary' // 'settings' or 'accept_necessary'
+                            },
+                        },
+                        settings_modal: {
+                            title: 'Cookie preferences',
+                            save_settings_btn: 'Save settings',
+                            accept_all_btn: 'Accept all',
+                            reject_all_btn: 'Reject all',
+                            close_btn_label: 'Close',
+                            cookie_table_headers: [{
+                                col1: 'Name'
+                            },
+                            {
+                                col2: 'Domain'
+                                },
+                                {
+                                    col3: 'Expiration'
+                                },
+                                {
+                                    col4: 'Description'
+                                }
+                            ],
+                            blocks: [{
+                                title: 'We use cookies!',
+                                description: 'Hi, this website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it.',
+                            }, {
+                                title: 'Strictly necessary cookies',
+                                description: 'These cookies are essential for the proper functioning of my website. Without these cookies, the website would not work properly',
+                                toggle: {
+                                    value: 'necessary',
+                                    enabled: true,
+                                    readonly: true // cookie categories with readonly=true are all treated as "necessary cookies"
+                                }
+                            }, {
+                                title: 'More information',
+                                description: 'For any queries in relation to our policy on cookies and your choices, please contact us <a class="cc-link" href="#">contact us</a>.',
+                            }]
+                        }
+                    }
+                }
+                
+            });
+        </script>    </body>
+
+
 </html>
